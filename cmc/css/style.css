@@ -3,7 +3,9 @@
     padding: 0;
     overflow-x: hidden;
 } 
-
+body{
+    width: 100vw;
+}
 /*main*/
 #particles-js{
     background: black;
@@ -94,6 +96,8 @@ header .contact{
 }
 .hero .buttons button{
     width: 150px;
+    background: linear-gradient(91.06deg, #4776E6 0.42%, #8E05C2 152.58%);
+
 }
 .section1{
     background: black;
@@ -118,4 +122,125 @@ header .contact{
 }
 .section2 p{
     width: 75%;
+}
+
+
+/*3section*/
+.section3{
+    height: 65vh;
+    background: linear-gradient(105.07deg, #700B97 -7.71%, #6767E7 47.1%, #8E54E9 101.92%);
+    display: flex;
+}
+.section3 .mob{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section3 .mob img{
+    width: 100%;
+    height: auto;
+}
+.section3 .desc{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section3 .desc h3{
+    margin-bottom: 20px;
+    padding-left: 10%;
+}
+.section3 .desc h1{
+    margin-bottom: 20px;
+    padding-left: 10%;
+
+}
+.section3 .desc p{
+    margin-bottom: 20px;
+    padding-left: 10%;
+
+}
+.section3 a{
+    align-self: center;
+}
+
+
+/*section4*/
+.section4{
+    padding-top: 5rem;
+    background: black;
+    color: white;
+}
+.section4 .desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.section4 .desc h1{
+    margin-bottom: 20px;
+}
+.section4 .desc p{
+    width: 80%;
+}
+.section4 .container{
+    margin: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.section4 .partner{/*margin 4 small*/
+    width: 400px;
+    height: 100px;
+    margin: 20px;
+    background: rgba(229, 229, 229, 0.22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 30%;
+}
+
+/*section5*/
+.section5{
+    background: black;
+    padding-top: 5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section5 .desc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.section5 .desc h1{
+    margin-bottom: 20px;
+}
+.section5 .desc p{
+    width: 80%;
+}
+.section5 .container{
+    margin-top: 5rem;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.section5 .stat{
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+    background: linear-gradient(155.1deg, rgba(196, 196, 196, 0) 35.75%, rgba(196, 196, 196, 0.13) 77.35%);
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
