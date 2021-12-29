@@ -393,11 +393,12 @@ header .contact{
 .section8{
     padding-top: 5rem;
     padding-bottom: 5rem;
-    background: red;
+    background: black;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    color: white;
     /*background: linear-gradient(105.07deg, #700B97 -7.71%, #6767E7 47.1%, #8E54E9 101.92%);*/
 }
 .section8 .desc{
@@ -406,14 +407,14 @@ header .contact{
     align-items: center;
     flex-direction: column;
 }
-.section8 .desc h3,.section8 .desc h1{
+.section8 .desc h1{
     margin-bottom: 20px;
 }
 .section8 .desc p{
     width: 80%;
 }
 .section8 .cards{
-    width: 100%;
+    width: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-around;
@@ -423,7 +424,7 @@ header .contact{
 }
 .section8 .cards .card-container{
     width: 25rem;
-    height: 23rem; /* background: green; */
+    height: 23rem;
     display: flex;
     align-items: center;
     margin: 20px;
@@ -446,10 +447,11 @@ header .contact{
     background: white;
     left: 0px;
     align-self: flex-end;
+    border-radius: 20px;
 }
 
 
-@media (max-width: 1370px) {
+@media (max-width: 1440px) {
     .section8 .cards{
         grid-template-columns: 1fr 1fr;
     }
