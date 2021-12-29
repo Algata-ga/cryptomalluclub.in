@@ -449,7 +449,14 @@ header .contact{
 }
 
 
-
+@media (max-width: 1370px) {
+    .section8 .cards{
+        grid-template-columns: 1fr 1fr;
+    }
+    .section8 .cards .card-container:nth-child(3n){
+        grid-column: 1 / -1;
+    }
+}
 
 @media (min-width: 992px) {
     .section5 .container{
