@@ -1,4 +1,5 @@
 *{
+    
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -16,11 +17,11 @@ body{
     height: 100vh;
     overflow: hidden;
 }
-header a{
+.desk a{
     text-decoration: none;
     color: white;
 }
-header{
+.desk{
     display: flex;
     align-items: center;
     height: 60px;
@@ -30,7 +31,7 @@ header{
     overflow: hidden;
     z-index: 5;
 }
-header .brand{
+.desk .brand{
     width: 20%;
     height: 100%;
     display: flex;
@@ -39,43 +40,46 @@ header .brand{
     padding-top: 10px;
     overflow: hidden;
 }
-header .links{
+.desk .links{
     width: 65%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-header .links ul{
+.desk .links ul{
     display: flex;
 }
-header .links ul li{
+.desk .links ul li{
     padding: 0rem 1rem;
 }
-header .links .option .sub{
+.desk .links .option .sub{
     display: none;
     background: green;
     
 }
-header .links .option .sub ul{
+.desk .links .option .sub ul{
     display: flex;
     flex-direction: column;
     width: max-content;
 }
-header .links .option .sub ul li{
+.desk .links .option .sub ul li{
     padding: .5rem .5rem;
 }
-header .links .option:hover .sub{
+.desk .links .option:hover .sub{
     display: block;
     position: fixed;
 }
-header .contact{
+.desk .contact{
     width: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
     padding-top: 5px;
+}
+.mob,.nav-links{
+    display: none;
 }
 .hero{
     color: white;
@@ -97,9 +101,13 @@ header .contact{
     width: 60%;
     display: flex;
     justify-content: space-evenly;
+
 }
 .hero .buttons button{
     width: 150px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
     background: linear-gradient(91.06deg, #4776E6 0.42%, #8E05C2 152.58%);
 
 }
@@ -175,6 +183,13 @@ header .contact{
 }
 .section3 a{
     align-self: center;
+}
+.section3 button{
+    border: none;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    margin-top: 20px;
 }
 
 
@@ -333,7 +348,9 @@ header .contact{
 .section7{
     padding-top: 5rem;
     padding-bottom: 5rem;
-    background: red;
+    background: white;
+    position: relative;
+    background: linear-gradient(105.07deg, #700B97 -7.71%, #6767E7 47.1%, #8E54E9 101.92%);
     /*background: linear-gradient(105.07deg, #700B97 -7.71%, #6767E7 47.1%, #8E54E9 101.92%);*/
 }
 .section7 .desc{
@@ -348,48 +365,47 @@ header .contact{
 .section7 .desc p{
     width: 80%;
 }
-/*
 .swiper {
-    width: 90%;
-    height: 100%;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    background: #1F1F1F;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+   filter: blur(6px);
+   background: white;
+  }
+  .swiper-slide-active{
+    filter: blur(0px);
+    width: 500px;
+  }
+  .swiper-3d .swiper-slide-shadow-right
+  ,.swiper-3d .swiper-slide-shadow-left {
+    background-image: none;
+}
+  .testimonialbox{
+    position: relative;
+    width: 100%;
+    padding: 40px;
+    color: #999;
 
-    
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+  }
+  .testimonialbox .quote{
+    position: absolute;
+    top: 20px;
+  }
+  .testimonialbox p{
+    margin: 0;
+    padding: 0;
+    width: 250px;
   }
 
-  .swiper-pagination-bullet {
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    line-height: 20px;
-    font-size: 12px;
-    color: #000;
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.2);
-  }
-
-  .swiper-pagination-bullet-active {
-    color: #fff;
-    background: #007aff;
-  }
-*/
 /*section8*/
 .section8{
     padding-top: 5rem;
@@ -526,6 +542,7 @@ footer section{
 
     display: grid;
     grid-template-areas: "info contact link follow";
+    margin-bottom: 2rem;
 }
 footer .info{
     grid-area: info;
@@ -541,7 +558,7 @@ form {
 }
 
 .feedback-input {
-  color:white;
+  color:black;
   font-family: Helvetica, Arial, sans-serif;
   font-weight:500;
   font-size: 18px;
@@ -650,7 +667,93 @@ footer .follow{
 }
 
 @media (max-width: 768px){
+    .desk{
+        display: none;
+    }
+    .hero .buttons{
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero .buttons button{
+        margin-top: 10px;
+    }
+    .mob{
+        display: flex;
+        align-items: center;
+        height: 60px;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        padding-top: 15px;
+        overflow: hidden;
+        z-index: 101;
+    }
+    .mob .hamburger{
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        margin-left: 10px;
+    }
+    .mob .brand{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        
+    }
+    .mob .contact{
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        padding-top: 5px;
+        margin-right: 10px
+    }
+    .nav-links{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        color: white;
+        justify-content: center;
+        z-index: 100;
+        align-items: center;
+        flex-direction: column;
+        position: fixed;
+        background-color: black;
+        clip-path: circle(0 at 0% 0%);
+        -webkit-clip-path: circle(0px at 0% 0%);
+        transition: all 1s ease-out;
+    }
+    .nav-links ul li{
+        margin: 5rem 0rem;
+        text-align: center;
+    }
+    #check{
+        display: none;
+    }
+    #check:checked ~ .li-collapse{
+        display: block;
 
+    }
+    .nav-links ul li ul li{
+        margin: 2rem 0rem;
+
+    }
+    .li-collapse{
+        width: 10rem;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        background: #4776E6;
+        display: none;
+        position: relative;
+
+    }
+    .open{
+        clip-path: circle(1500px at 0% 0%);
+        -webkit-clip-path: circle(1500px at 0% 0%);
+    }
     .section3{
         height: 65vh;
         padding-top: 0;
@@ -692,6 +795,11 @@ footer .follow{
         "link follow";
         align-items: center;
     }
+    footer h1{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
     footer .info,.contact,.link,.follow{
         
         display: flex;
@@ -699,6 +807,13 @@ footer .follow{
         align-items: center;
         flex-direction: column;
 
+    }
+    footer .follow{
+        height: 15rem;
+        align-self: auto;
+    }
+    footer .follow h3{
+        text-align: center;
     }
     
 }

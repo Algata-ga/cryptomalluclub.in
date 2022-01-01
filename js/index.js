@@ -1,3 +1,15 @@
+$(document).ready(function(){
+    $(".hamburger").click(function(){
+      $(".nav-links").toggleClass("open");
+    });
+  });
+
+
+  
+
+
+
+
 const accordian = document.getElementsByClassName("contents");
 
 for(i=0;i<accordian.length;i++){
@@ -5,3 +17,4 @@ for(i=0;i<accordian.length;i++){
         this.classList.toggle('active')
     })
 }
+
