@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap');
+/*font-family: 'Work Sans', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+/*font-family: 'Playfair Display', serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+/*font-family: 'Open Sans', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;500;600&display=swap');
+/*font-family: 'Signika', sans-serif;*/
+
+
+
+
 *{
     
     margin: 0;
@@ -7,6 +19,7 @@
 body{
     width: 100vw;
 }
+
 /*main*/
 #particles-js{
     background-image: url("../assets/bckg.jpg");
@@ -30,6 +43,16 @@ body{
     margin-top: 15px;
     overflow: hidden;
     z-index: 5;
+    font-family: 'Work Sans', sans-serif;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: capitalize;
+
+    color: #FFFFFF;
 }
 .desk .brand{
     width: 20%;
@@ -89,13 +112,29 @@ body{
     align-items: center;
     height: 100vh;
     position: absolute;
+
+    
 }
 .hero h1{
     padding-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 50.5px;
+    text-align: center;
+    text-transform: uppercase;
 }
 .hero p{
     width: 80%;
     padding-bottom: 20px;
+    font-family: 'Work Sans', sans-serif;
+ font-style: normal;
+font-weight: normal;
+font-size: 25px;
+line-height: 29px;
+text-align: center;
+text-transform: uppercase;
 }
 .hero .buttons{
     width: 60%;
@@ -105,10 +144,19 @@ body{
 }
 .hero .buttons button{
     width: 150px;
-    height: 30px;
-    border-radius: 20px;
+    height: 40px;
     border: none;
+    color: white;
     background: linear-gradient(91.06deg, #4776E6 0.42%, #8E05C2 152.58%);
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 1rem;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.06em;
+text-transform: uppercase;
 
 }
 .section1{
@@ -130,9 +178,25 @@ body{
 }
 .section2 h1{
     padding-bottom: 30px;
+    font-family: 'Open Sans', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 2.2rem;
+line-height: 30px;
+/* identical to box height */
+letter-spacing: 0.02em;
+text-transform: capitalize;
 }
 .section2 p{
     width: 75%;
+
+    font-family: 'Work Sans', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 1rem;
+/* identical to box height */
+text-align: center;
+text-transform: capitalize;
 }
 
 
@@ -175,12 +239,24 @@ body{
     margin-top: 10px;
     padding-left: 10%;
     overflow: hidden;
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.2rem;
+    text-transform: uppercase;
 }
 .section3 .desc p{
     width: 90%;
     margin-top: 10px;
     padding-left: 10%;
     overflow: hidden;
+
+    font-family: 'Work Sans', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+line-height: 29px;
+text-transform: uppercase;
 }
 .section3 a{
     align-self: center;
@@ -189,7 +265,7 @@ body{
     border: none;
     width: 100px;
     height: 30px;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-top: 20px;
 }
 
@@ -209,9 +285,23 @@ body{
 }
 .section4 .desc h1{
     margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.2rem;
+    /* identical to box height */
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
 }
 .section4 .desc p{
     width: 80%;
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    /* identical to box height */
+    text-align: center;
+    text-transform: capitalize;
 }
 .section4 .container{
     margin: 2rem;
@@ -223,7 +313,8 @@ body{
     width: 400px;
     height: 100px;
     margin: 20px;
-    background: rgba(229, 229, 229, 0.22);
+    background: rgba(229,229,229,0.22);
+    border-radius: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -248,9 +339,23 @@ body{
 }
 .section5 .desc h1{
     margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.2rem;
+    /* identical to box height */
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
 }
 .section5 .desc p{
     width: 80%;
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    /* identical to box height */
+    text-align: center;
+    text-transform: capitalize;
 }
 .section5 .container{
     margin-top: 2rem;
@@ -277,6 +382,16 @@ body{
     position: relative;
 
 }
+.section5 .stat:nth-child(n){
+    margin-top: 3rem;
+}
+.section5 .stat:last-child{
+    margin-bottom: 3rem;
+}
+.section5 .stat:hover{
+    box-shadow: 0px 0px 41.22px 12px #8E54E9;
+    z-index: 12;
+}
 
 /*section6*/
 .section6{
@@ -298,9 +413,23 @@ body{
 }
 .section6 .desc h1{
     margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.2rem;
+    /* identical to box height */
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
 }
 .section6 .desc p{
     width: 80%;
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    /* identical to box height */
+    text-align: center;
+    text-transform: capitalize;
 }
 .section6 .cards{
     width: 90%;
@@ -362,9 +491,23 @@ body{
 }
 .section7 .desc h3,.section7 .desc h1{
     margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.2rem;
+    /* identical to box height */
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
 }
 .section7 .desc p{
     width: 80%;
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    /* identical to box height */
+    text-align: center;
+    text-transform: capitalize;
 }
 .swiper {
     width: 100%;
@@ -431,9 +574,23 @@ body{
 }
 .section8 .desc h1{
     margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.2rem;
+    /* identical to box height */
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
 }
 .section8 .desc p{
     width: 80%;
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    /* identical to box height */
+    text-align: center;
+    text-transform: capitalize;
 }
 .section8 .cards{
     width: 90%;
@@ -455,7 +612,8 @@ body{
     width: 25rem;
     height: 13rem;
     background: lavender;
-    right: -7px; background: gold;
+    right: -7px; 
+    background: gold;
     left: 7px;
     position: relative;
     align-self: flex-start;
@@ -463,13 +621,13 @@ body{
 .section8 .cards .card-container .card2{
     width: 45rem;
     height: 15rem;
-    background: rgb(28, 28, 136);
     position: relative;
     right: -25px;
-    background: white;
     left: 0px;
     align-self: flex-end;
     border-radius: 20px;
+    background: #E5E5E5;
+    border-radius: 7.90228px;
 }
 
 /*section9*/
@@ -491,9 +649,23 @@ body{
 }
 .section9 .desc h3,.section9 .desc h1{
     margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.2rem;
+    /* identical to box height */
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
 }
 .section9 .desc p{
     width: 80%;
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    /* identical to box height */
+    text-align: center;
+    text-transform: capitalize;
 }
 
 .accordian{
@@ -811,6 +983,13 @@ footer .follow{
         margin-top: 5px;
         margin-bottom: 5px;
         text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 2.2rem;
+        /* identical to box height */
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
     }
     footer .info,.contact,.link,.follow{
         
