@@ -14,10 +14,10 @@
     
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 } 
 body{
-    width: 100vw;
+    
+    width: 100%;
 }
 
 /*main*/
@@ -26,7 +26,7 @@ body{
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     overflow: hidden;
 }
@@ -39,7 +39,7 @@ body{
     align-items: center;
     height: 60px;
     position: fixed;
-    width: 100vw;
+    width: 100%;
     margin-top: 15px;
     overflow: hidden;
     z-index: 5;
@@ -160,14 +160,14 @@ text-transform: uppercase;
 
 }
 .section1{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
 /*2 section*/
 
 .section2{
-    width: 100vw;
+    width: 100%;
     height: 45vh;
     background: black;
     color: white;
@@ -304,7 +304,7 @@ text-transform: uppercase;
     text-transform: capitalize;
 }
 .section4 .container{
-    margin: 2rem;
+    padding-bottom: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -513,46 +513,69 @@ text-transform: uppercase;
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
-  }
+    
+}
 
-  .swiper-slide {
+.swiper-slide {
     background-position: center;
     background-size: cover;
-    width: max-content;
-    height: 300px;
-    background: #1F1F1F;
-    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
-   filter: blur(6px);
-   background: white;
-  }
-  .swiper-slide-active{
-    filter: blur(0px);
-    width: 500px;
-  }
-  .swiper-3d .swiper-slide-shadow-right
-  ,.swiper-3d .swiper-slide-shadow-left {
-    background-image: none;
-}
-  .testimonialbox{
-    position: relative;
-    width: 100%;
-    height: 100%;
+    height: initial !important;
     display: flex;
-    align-items: center;
-    color: #999;
     justify-content: center;
+    align-items: center;
+    filter: opacity(.5);
+    filter: blur(4px);
+    background: #bdacf3;
+}
+.swiper-slide-active {
+    filter: opacity(1);
+    color: black;
+}
 
+.swiper-3d .swiper-slide-shadow,
+.swiper-3d .swiper-slide-shadow-bottom,
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right,
+.swiper-3d .swiper-slide-shadow-top {
+    background: linear-gradient(
+        360deg,
+        #ffce31 -0.95%,
+        #000000 -0.94%,
+        #1b232a 93.27%
+    );
+    z-index: -5;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+.swiper-wrapper {
+    width: 50% !important;
+}
+.swiper .content {
+    text-align: center;
+    margin-top: 5%;
+    border-radius: 35%;
+    font-family: "Saira", sans-serif;
+}
+.swiper-pagination-bullet-active {
+    background-color: #51aeff;
+}
 
-  }
-  .testimonialbox .quote{
-    position: absolute;
-    top: 20px;
-  }
-  .testimonialbox p{
-    margin: 0;
-    padding: 0;
-    width: 250px;
-  }
+.iconify {
+    height: 50px !important;
+    width: auto;
+    padding-bottom: 1rem;
+}
+.card-cont {
+    margin: 10px;
+}
+.content .fa-star {
+    color: gold;
+}
+.founder {
+    padding-left: 50%;
+}
 
 /*section8*/
 .section8{
@@ -861,7 +884,7 @@ footer .follow{
         height: 60px;
         position: fixed;
         top: 0;
-        width: 100vw;
+        width: 100%;
         padding-top: 15px;
         overflow: hidden;
         z-index: 101;
@@ -889,7 +912,7 @@ footer .follow{
         margin-right: 10px
     }
     .nav-links{
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         display: flex;
         color: white;
