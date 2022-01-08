@@ -466,10 +466,14 @@ text-transform: uppercase;
 
 
 }
-.section6 .cards .container .card :before{
+.section6 .cards .container .card .icon{
     width: 120px;
     height: 120px;
     border: 4px solid;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: double 4px transparent;
     background-image: linear-gradient(155.1deg, rgb(0, 0, 0) 25.75%, rgba(0, 0, 0,.9) 70.35%),linear-gradient(105.07deg, #700B97 -7.71%, #6767E7 47.1%, #8E54E9 101.92%);
     background-origin: border-box;
