@@ -18,7 +18,8 @@ body{
   .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    width: fit-content !important;
+    height: max-content;
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -37,13 +38,16 @@ body{
   }
   .swiper-slide-active{
       filter: opacity(1) !important;
+      background: transparent !important;
+
   }
 
   .swiper-slide img {
     display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+  }
+  .swiper-slide-active{
   }
 
   .swiper {

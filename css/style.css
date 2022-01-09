@@ -536,8 +536,7 @@ text-transform: uppercase;
     display: flex;
     justify-content: center;
     align-items: center;
-    filter: opacity(.5);
-    filter: blur(4px);
+    filter: opacity(0);
     background: #bdacf3;
 }
 .swiper-slide-active {
@@ -550,12 +549,7 @@ text-transform: uppercase;
 .swiper-3d .swiper-slide-shadow-left,
 .swiper-3d .swiper-slide-shadow-right,
 .swiper-3d .swiper-slide-shadow-top {
-    background: linear-gradient(
-        360deg,
-        #ffce31 -0.95%,
-        #000000 -0.94%,
-        #1b232a 93.27%
-    );
+    
     z-index: -5;
 }
 .swiper-slide img {
