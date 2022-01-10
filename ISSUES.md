@@ -68,9 +68,12 @@
 
 1.  
 
-    * background: linear-gradient(358.67deg, #8E54E9 -132.18%, #6767E7 157.57%); opacity: 0.53;
+
     * bgcolor #040503 
-    * background: linear-gradient(4.96deg, #000000 13.72%, rgba(0, 0, 0, 0) 93.74%); transform: rotate(-0.08deg);
+
+    *  background: linear-gradient(359deg, #000000 8.04%, #331E54 25.53%, #503084 35.58%, #693EAC 43.88%, #8E54E9 56.67%, #6767E7 127.74%);
+opacity: 0.53;
+
 
 2. Card should be shorter
 
