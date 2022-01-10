@@ -5,6 +5,20 @@ function ready(fn) {
         document.addEventListener("DOMContentLoaded", fn);
     }
 }
+HTMLElement.prototype.serialize = function () {
+    var res = "";
+    var elements = this.querySelectorAll("input, select, textarea");
+    for (var i = 0; i < elements.length; ++i) {
+        var element = elements[i];
+        var name = element.name;
+        var value = element.value;
+
+        if (name) {
+            res = res + `${name}=${value}&`;
+        }
+    }
+    return res;
+};
 
 ready(function () {
     document.getElementById("hamburger").addEventListener(
@@ -28,21 +42,20 @@ ready(function () {
     document.getElementById("submit-form").addEventListener(
         "submit",
         function (form) {
+            const google_script_url =
+                "https://script.google.com/macros/s/AKfycbx8P9tgMBuI27gVchzeM6Yj2oxlZnJulQdqPKhjtNbW8Y4iq-uGQW0tYYJowDgRmlrB/exec";
+
             const request = new XMLHttpRequest();
-            request.open(
-                "POST",
-                "https://script.google.com/macros/s/AKfycbznIGAyNRAIHVwpDmU6GGwm4k9uehMjJnJrZ5k9YMKoQwgquB3mpu1IiQPuqqwn5xJ_/exec",
-                true
-            );
+            request.open("POST", google_script_url, true);
             request.setRequestHeader(
                 "Content-Type",
-                "application/x-www-form-urlencoded; charset=UTF-8"
+                "application/x-www-form-urlencoded"
             );
             const data = document.getElementById("submit-form").serialize();
             try {
                 request.send(data);
                 alert("Sent successfully!");
-                window.location.reload();
+                document.getElementById("submit-form").reset();
             } catch (err) {
                 alert("Sending failed.");
                 window.location.reload();
