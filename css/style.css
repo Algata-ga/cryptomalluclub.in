@@ -39,10 +39,9 @@ body{
     align-items: center;
     height: 60px;
     position: fixed;
-    backdrop-filter: url(filters.svg#filter) blur(4px) brightness(60%);
+    backdrop-filter: blur(4px) brightness(60%);
     width: 100%;
     padding-top: 7px;
-    overflow: hidden;
     z-index: 5;
     font-family: 'Work Sans', sans-serif;
 
@@ -1012,10 +1011,8 @@ footer .link ul ul{
         flex-basis: 40%;
     }
     footer section{
-        grid-template-areas: 
-        "info info"
-        "contact contact"
-        "link follow";
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
     }
     footer h1{
