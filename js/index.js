@@ -8,11 +8,13 @@ function ready(fn) {
 HTMLElement.prototype.serialize = function () {
     var res = "";
     var elements = this.querySelectorAll("input, select, textarea");
-    for (var i in elements) {
-        if (i.name) {
-            res = res + `${i.name}=${i.value}&`;
+    for (let i = 0; i < elements.length; i++) {
+        const e = elements[i];
+        if (e.name) {
+            res = res + `${e.name}=${e.value}&`;
         }
     }
+    console.log(res);
     return res;
 };
 
