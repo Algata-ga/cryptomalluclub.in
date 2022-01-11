@@ -2,67 +2,67 @@
 
 ### index.html
 
-1. Why CMC and TG icon no drop down arrow + increase navbar margin-top
+1. Why CMC and TG icon no drop down arrow + increase navbar margin-top.....
 
 2. TG dropdown should show 3 peoples tg links
     
     1. Content for dropdown 
     
-    2. tg icons color #6767e7
+    2. tg icons color #6767e7.........
 
 3. Fix the colors of Why CMC? dropdown
 
-4. TG icon diameter = CMC logo's height
+4. TG icon diameter = CMC logo's height.....
 
-5. Blurred navbar missing in mobile view
+5. Blurred navbar missing in mobile view.....
 
-6. AMA page more info button
+6. AMA page more info button....
 
-7. AMA page no contact form
+7. AMA page no contact form....
 
-8. Services section card border missing ( refer design ) 
+8. Services section card border missing ( refer design ) ........
 
-9. Services section rounds blue tint should be ash ( refer design )
+9. Services section rounds blue tint should be ash ( refer design )......
 
-10. Partners to service bg color not #000000 , it is #0c0d08
+10. Partners to service bg color not #000000 , it is #0c0d08........
 
-11. Services card should be a bit bigger
+11. Services card should be a bit bigger 1111111
 
-12. Testimonials should be smaller - 22px 
+12. Testimonials should be smaller - 22px ...........
 
-13. Card should be stationary, change content only
+13. Card should be stationary, change content only/////
 
-14. Star and content more padding
+14. Star and content more padding......
 
-15. Card should be taller, more padding, content should be centered
+15. Card should be taller, more padding, content should be centered........
 
-16. Team in the center
+16. Team in the center.........
 
 17. CMC is a team work yellow card should be wider
 
-18. Rounder corners for FAQ cards, font color #000000, '+' should be down arrow
+18. Rounder corners for FAQ cards, font color #000000, '+' should be down arrow...........
 
-19. Footer, CMA should be CMC logo
+19. Footer, CMA should be CMC logo.........
 
 20. Contact centered, font size more, font Roboto Bold 28 
 
-21. Quick Links , Follow us - Roboto Bold 16
+21. Quick Links , Follow us - Roboto Bold 16.....
 
-22. Other things in Roboto Regular 14
+22. Other things in Roboto Regular 14.....
 
-23. Partners, Recent AMA,... , color #9A9EA5
+23. Partners, Recent AMA,... , color #9A9EA5.......
 
-24. CMC tagline Roboto Regular 15 #ffffff
+24. CMC tagline Roboto Regular 15 #ffffff.......
 
-25. Name, Email, Message, Button Roboto Regular 14 #9A9EA5
+25. Name, Email, Message, Button Roboto Regular 14 #9A9EA5..........
 
-26. Change button label
+26. Change button label.......
 
-27. Copyright Roboto Light 12
+27. Copyright Roboto Light 12........
 
-28. Horizontal line #e5e7eb
+28. Horizontal line #e5e7eb...........
 
-29. width of line not 100%, 70% with 15% padding on both sides
+29. width of line not 100%, 70% with 15% padding on both sides............
 
 ### ama.html
 
