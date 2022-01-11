@@ -12,7 +12,7 @@ particlesJS.load('particles-js', 'particles.json', function() {
 /* Otherwise just put the config content (json): */
 const mediaQueryList = window.matchMedia("only screen and (max-width: 600px)");
 
-const particles_count = mediaQueryList.matches ? 15 : 80;
+const particles_count = mediaQueryList.matches ? 15 : 70;
 
 particlesJS({
     particles: {
@@ -24,12 +24,12 @@ particlesJS({
             },
         },
         color: {
-            value: ["#555555" /*"#f37ad1","#9882f4","#55eed0"*/],
+            value: ["#555555"],
         },
         shape: {
             type: ["circle"],
             stroke: {
-                width: 0,
+                width: 1,
                 color: "#555555",
             },
             polygon: {

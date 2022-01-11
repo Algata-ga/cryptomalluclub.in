@@ -8,13 +8,9 @@ function ready(fn) {
 HTMLElement.prototype.serialize = function () {
     var res = "";
     var elements = this.querySelectorAll("input, select, textarea");
-    for (var i = 0; i < elements.length; ++i) {
-        var element = elements[i];
-        var name = element.name;
-        var value = element.value;
-
-        if (name) {
-            res = res + `${name}=${value}&`;
+    for (var i in elements) {
+        if (i.name) {
+            res = res + `${i.name}=${i.value}&`;
         }
     }
     return res;
@@ -28,20 +24,10 @@ ready(function () {
         },
         false
     );
-});
 
-const accordian = document.getElementsByClassName("contents");
-
-for (i = 0; i < accordian.length; i++) {
-    accordian[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-    });
-}
-
-ready(function () {
     document.getElementById("submit-form").addEventListener(
         "submit",
-        function (form) {
+        function (e) {
             const google_script_url =
                 "https://script.google.com/macros/s/AKfycbx8P9tgMBuI27gVchzeM6Yj2oxlZnJulQdqPKhjtNbW8Y4iq-uGQW0tYYJowDgRmlrB/exec";
 
@@ -56,6 +42,7 @@ ready(function () {
                 request.send(data);
                 alert("Sent successfully!");
                 document.getElementById("submit-form").reset();
+                e.preventDefault();
             } catch (err) {
                 alert("Sending failed.");
                 window.location.reload();
@@ -64,3 +51,11 @@ ready(function () {
         false
     );
 });
+
+const accordian = document.getElementsByClassName("contents");
+
+for (i = 0; i < accordian.length; i++) {
+    accordian[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+    });
+}
