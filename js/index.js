@@ -29,21 +29,21 @@ for (i = 0; i < accordian.length; i++) {
 function testimonials() {
     const testimonials_data = [
         {
-            source: "Team ABC",
+            source: "Team MEXC Global",
             content:
-                "The collaboration and responses from CRYPTO CHALLENGERS is firm and swift, I can see there are a lot of p",
+                " The collaboration and responses from CRYPTO CHALLENGERS is firm and swift, I can see there are a lot of potential of staying with them for long term. Hope its community will expand tremendously and more to come ",
         },
 
         {
-            source: "Team BCD",
+            source: "Team Bigone Exchangel",
             content:
-                "The collaboration and responses from CRYPTO CHALLENGERS is firm and swift, I can see there are a lot of p",
+                " Crypto challengers is a Great Community To Intruduce Any Platform On Crypto World . And, Yeah Very Active and Great Community. Wishes To Be a Great Reputation for them and Wish to Maintain Their Reputation, Activeness, Growth As well As ",
         },
 
         {
-            source: "Team DEF",
+            source: "Team Shoefy",
             content:
-                "The collaboration and responses from CRYPTO CHALLENGERS is firm and swift, I can see there are a lot of p",
+                " Doing the AMA with Crypto Challengers was an amazing experience. The genuine passion of the community, the contents we were able to present and above all, the very professional way of organizing the AMA by the hosts, gives me all the reasons to do more future AMAs them. Crypto Challengers is worth recommending to others",
         },
 
         {
@@ -55,6 +55,7 @@ function testimonials() {
 
     const testimonials_source = document.getElementById("testimonial_source");
     const testimonials_content = document.getElementById("testimonial_content");
+    const testimonial_box = document.getElementById("testimonial_box");
 
     let i = 0;
 
@@ -62,16 +63,19 @@ function testimonials() {
     testimonials_content.innerHTML = testimonials_data[0].content;
 
     function next() {
-        i++;
-        const testimonial = testimonials_data[i % testimonials_data.length];
-        testimonials_source.innerHTML = testimonial.source;
-        testimonials_content.innerHTML = testimonial.content;
-        console.log(testimonial);
+        testimonial_box.classList.toggle("hide");
+
+        setTimeout(() => {
+            testimonial_box.classList.toggle("hide");
+            i++;
+            const testimonial = testimonials_data[i % testimonials_data.length];
+            testimonials_source.innerHTML = testimonial.source;
+            testimonials_content.innerHTML = testimonial.content;
+        }, 420);
     }
 
     return next;
 }
-
 ready(function () {
     document.getElementById("hamburger").addEventListener(
         "click",

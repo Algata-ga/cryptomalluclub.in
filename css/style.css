@@ -6,7 +6,7 @@
 /*font-family: 'Open Sans', sans-serif;*/
 @import url("https://fonts.googleapis.com/css2?family=Signika:wght@300;500;600&display=swap");
 /*font-family: 'Signika', sans-serif;*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 /*font-family: 'Roboto', sans-serif;*/
 
 * {
@@ -17,25 +17,24 @@
 body {
     width: 100%;
 }
-.nav-links ul li a{
+.nav-links ul li a {
     text-decoration: none;
     color: #0c0d08;
 }
-.nav-links ul li a:hover{
+.nav-links ul li a:hover {
     color: #414457;
 }
-.contactmem a{
+.contactmem a {
     color: #0c0d08;
 }
-.contactmem a:hover{
+.contactmem a:hover {
     color: #414457;
 }
-footer li a{
+footer li a {
     text-decoration: none;
     color: #e5e7eb;
-
 }
-footer li a:hover{
+footer li a:hover {
     color: #b6dbfd;
 }
 
@@ -124,18 +123,15 @@ footer li a:hover{
     justify-content: center;
     align-items: center;
 }
-.desk .contact a .fa{
+.desk .contact a .fa {
     font-size: 2rem !important;
     color: #6767e7;
-
-  
-
 }
-.desk .contact a .fas{
+.desk .contact a .fas {
     position: relative;
     top: -3px;
 }
-.contact .contactmem{
+.contact .contactmem {
     display: none;
     background: #bdacf3;
     color: #0c0d08;
@@ -146,10 +142,9 @@ footer li a:hover{
     right: 40px;
     padding: 2rem 2rem;
 }
-.contact:hover .contactmem{
+.contact:hover .contactmem {
     display: block;
 }
-
 
 .mob,
 .nav-links {
@@ -323,32 +318,32 @@ footer li a:hover{
     font-size: 1rem;
     margin-top: 20px;
 }
-.section3 button .fas{
+.section3 button .fas {
     font-size: 1rem;
     position: relative;
     top: -2px;
     margin-left: 10px;
 }
-a{
+a {
     text-decoration: none;
 }
 
 /*section4*/
 
-.partnerbox{
+.partnerbox {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #0c0d08;
 }
-.partnerbox .container{
+.partnerbox .container {
     width: 95%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-.partnerbox .partimg{
+.partnerbox .partimg {
     width: 18rem;
     height: 5rem;
     flex-basis: 25%;
@@ -359,10 +354,10 @@ a{
     justify-content: center;
     align-items: center;
 }
-.partnerbox .partimg img{
+.partnerbox .partimg img {
     width: 16rem;
 }
-.partnerbox .partimg .circleimg{
+.partnerbox .partimg .circleimg {
     width: 5rem;
 }
 
@@ -510,7 +505,6 @@ a{
     background: #1f1f1f;
     border-right: 2px solid #3a3a3a;
     border-bottom: 2px solid #3a3a3a;
-
 }
 .section6 .cards .container .card .icon {
     width: 120px;
@@ -563,7 +557,7 @@ a{
     align-items: center;
     flex-direction: column;
 }
-.section7 .desc h3{
+.section7 .desc h3 {
     margin-bottom: 20px;
     font-family: "Open Sans", sans-serif;
     font-style: normal;
@@ -597,19 +591,23 @@ a{
     text-align: center;
     text-transform: capitalize;
 }
+.hide {
+    opacity: 0;
+    transition: opacity 400ms;
+}
 
-.testimonial{
+.testimonial {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.testimonial .container{
+.testimonial .container {
     width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.testimonial .container .box{
+.testimonial .container .box {
     width: 60%;
     text-align: center;
     background: #b8aef3;
@@ -617,12 +615,10 @@ a{
     margin-top: 20px;
 }
 
-
-
 .iconify {
     height: 50px !important;
     width: auto;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
 }
 .card-cont {
     margin: 10px;
@@ -634,7 +630,6 @@ a{
 .founder {
     padding-top: 20px;
     padding-bottom: 2rem;
-
 }
 
 /*section8*/
@@ -701,13 +696,12 @@ a{
     align-self: flex-start;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-
 }
-.section8 .cards .card-container .card1  img{
+.section8 .cards .card-container .card1 img {
     width: auto;
     height: 13rem;
 }
-.section8 .cards .card-container .card2{
+.section8 .cards .card-container .card2 {
     width: 45rem;
     height: 20rem;
     position: relative;
@@ -726,14 +720,11 @@ a{
     padding: 10px;
     flex-direction: column;
 }
-.section8 .cards .card-container .card2  h3{
-
+.section8 .cards .card-container .card2 h3 {
     margin-top: 20px;
 }
-.section8 .cards .card-container .card2  h5{
-    
+.section8 .cards .card-container .card2 h5 {
     align-self: inherit;
-
 }
 
 /*section9*/
@@ -825,8 +816,8 @@ footer {
     align-items: center;
     background: #0c0d08;
 }
-footer h2{
-    font-family: 'Roboto', sans-serif;
+footer h2 {
+    font-family: "Roboto", sans-serif;
     font-size: 20px;
     font-weight: 700;
 }
@@ -841,11 +832,11 @@ footer section {
 }
 footer .info {
     grid-area: info;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 18px;
     color: #ffffff;
 }
-footer .info p{
+footer .info p {
     width: 90%;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -855,7 +846,7 @@ footer .contact {
     grid-area: contact;
     text-align: center;
 }
-footer .contact h1{
+footer .contact h1 {
     text-align: center;
 }
 form {
@@ -865,8 +856,8 @@ form {
 }
 
 .feedback-input {
-    color: #9A9EA5;
-    font-family: 'Roboto', sans-serif;
+    color: #9a9ea5;
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
     border-radius: 5px;
@@ -880,13 +871,12 @@ form {
     box-sizing: border-box;
     outline: 0;
 }
-.feedback-input::placeholder{
+.feedback-input::placeholder {
     text-align: center;
 }
 
 .feedback-input:focus {
     border: 2px solid #0c0d08;
-    
 }
 
 textarea {
@@ -899,7 +889,7 @@ textarea {
 }
 
 [type="submit"] {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
     width: 40%;
     background: linear-gradient(
@@ -939,32 +929,30 @@ footer .follow {
     grid-area: follow;
     justify-items: center;
     margin-left: 30px;
-
 }
 footer .link ul ul {
     padding-left: 10px;
 }
-footer .link ul li{
+footer .link ul li {
     padding-top: 10px;
     list-style: none;
 }
-footer .link ul ul li{
+footer .link ul ul li {
     padding-top: 0px;
     list-style: circle;
 }
-footer .follow ul li{
+footer .follow ul li {
     padding-top: 15px;
     list-style: none;
 }
-.line{
+.line {
     background: #0c0d08;
 }
-.line div{
+.line div {
     margin-left: 10%;
     margin-right: 10%;
     height: 1px;
     background: #e5e7eb;
-
 }
 .copy {
     height: 50px;
@@ -973,10 +961,10 @@ footer .follow ul li{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 14px;
 }
-.copy .far{
+.copy .far {
     margin-right: 3px;
 }
 
@@ -1067,18 +1055,14 @@ footer .follow ul li{
         margin-right: 10px;
         padding-left: -30px;
     }
-    .mob .contact a .fa{
+    .mob .contact a .fa {
         font-size: 2rem;
         color: #6767e7;
-
-
-        
-
     }
-    .mob .contact a .fas{
+    .mob .contact a .fas {
         display: none;
     }
-    .mob .contact .contactmem{
+    .mob .contact .contactmem {
         top: 60px;
     }
     .nav-links {
@@ -1099,9 +1083,9 @@ footer .follow ul li{
     .nav-links ul li {
         margin: 3rem 3rem;
         text-align: left;
-        transition: .5s ease;
+        transition: 0.5s ease;
     }
-    .smalldesc{
+    .smalldesc {
         background: #9676d7;
         width: 85%;
         display: flex;
@@ -1114,10 +1098,10 @@ footer .follow ul li{
         position: relative;
         top: 40vh;
     }
-    .smalldesc h5{
+    .smalldesc h5 {
         max-width: 90%;
     }
-    .smalldesc button{
+    .smalldesc button {
         width: 150px;
         height: 40px;
         margin-top: 10px;
@@ -1130,16 +1114,13 @@ footer .follow ul li{
         display: none;
     }
     #check:checked ~ .li-collapse {
-
         display: block;
-        
     }
-    .nav-links ul li ul{
-        transition: .5s ease;
+    .nav-links ul li ul {
+        transition: 0.5s ease;
     }
     .nav-links ul li ul li {
         margin: 2rem 2rem;
-        
     }
     .li-collapse {
         width: 55%;
@@ -1154,11 +1135,11 @@ footer .follow ul li{
         clip-path: circle(1000px at 0% 0%);
         -webkit-clip-path: circle(1500px at 0% 0%);
     }
-    .hero h1{
+    .hero h1 {
         font-size: 1.3rem;
         line-height: 2.5rem;
     }
-    .hero p{
+    .hero p {
         font-size: 1.1rem;
     }
     .section3 {
@@ -1180,7 +1161,6 @@ footer .follow ul li{
         width: auto;
         min-width: 35vw;
         height: 70vh;
-
     }
     .section3 .mobile::before {
         content: "";
@@ -1205,14 +1185,13 @@ footer .follow ul li{
     }
     footer section {
         display: grid;
-        grid-template-areas: 
-        "info info" 
-        "contact contact" 
-        "link follow";
+        grid-template-areas:
+            "info info"
+            "contact contact"
+            "link follow";
 
         align-items: center;
-        font-family: 'Roboto', sans-serif;
-
+        font-family: "Roboto", sans-serif;
     }
     footer h1 {
         margin-top: 5px;
@@ -1226,7 +1205,7 @@ footer .follow ul li{
         letter-spacing: 0.02em;
         text-transform: capitalize;
     }
-    footer .info p{
+    footer .info p {
         width: 70%;
     }
     footer .info,
@@ -1238,10 +1217,10 @@ footer .follow ul li{
         align-items: center;
         flex-direction: column;
     }
-    footer .contact form{
+    footer .contact form {
         margin-right: 0;
     }
-    footer .link{
+    footer .link {
         margin-left: 0;
     }
     footer .follow {
@@ -1258,7 +1237,7 @@ footer .follow ul li{
     h3 {
         width: 80%;
     }
-    
+
     .hero .buttons {
         flex-direction: column;
         align-items: center;
@@ -1269,7 +1248,7 @@ footer .follow ul li{
     .section2 {
         height: 45vh;
     }
-    .section2 h1{
+    .section2 h1 {
         font-size: 2.1rem;
         text-align: left;
     }
@@ -1279,13 +1258,25 @@ footer .follow ul li{
     .section3 {
         padding-bottom: 35vh;
     }
-    .section3 .desc h1,.section4 .desc h1,.section5 .desc h1,.section6 .desc h1,.section7 .desc h1,.section8 .desc h1,.section9 .desc h1{
+    .section3 .desc h1,
+    .section4 .desc h1,
+    .section5 .desc h1,
+    .section6 .desc h1,
+    .section7 .desc h1,
+    .section8 .desc h1,
+    .section9 .desc h1 {
         font-size: 1.8rem;
         text-align: left;
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    .section3 .desc p,.section4 .desc p,.section5 .desc p,.section6 .desc p,.section7 .desc p,.section8 .desc p,.section9 .desc p{
+    .section3 .desc p,
+    .section4 .desc p,
+    .section5 .desc p,
+    .section6 .desc p,
+    .section7 .desc p,
+    .section8 .desc p,
+    .section9 .desc p {
         font-size: 1.1rem;
         text-align: left;
         margin-top: 10px;
@@ -1296,7 +1287,7 @@ footer .follow ul li{
         height: 70vh;
     }
 
-    .testimonial .container .box{
+    .testimonial .container .box {
         width: 90%;
     }
     .section5 .stat {
@@ -1336,13 +1327,11 @@ footer .follow ul li{
     .section8 .cards .card-container {
         width: 18rem;
     }
-    .section8 .cards .card-container .card2 p i{
-        font-size: .7rem !important;
+    .section8 .cards .card-container .card2 p i {
+        font-size: 0.7rem !important;
     }
     .section8 .cards .card-container .card1 {
         width: 27rem;
         height: 10rem;
     }
-    
 }
-
