@@ -31,25 +31,30 @@ function testimonials() {
         {
             source: "Team MEXC Global",
             content:
-                " The collaboration and responses from CRYPTO CHALLENGERS is firm and swift, I can see there are a lot of potential of staying with them for long term. Hope its community will expand tremendously and more to come ",
+                "CRYPTO MALLU CLUB's participation and reactions are solid and prompt, and I see a lot of promise in working with them in the long run. I'm hoping that its community will grow greatly in the future.",
         },
 
         {
             source: "Team Bigone Exchangel",
             content:
-                " Crypto challengers is a Great Community To Intruduce Any Platform On Crypto World . And, Yeah Very Active and Great Community. Wishes To Be a Great Reputation for them and Wish to Maintain Their Reputation, Activeness, Growth As well As ",
+                "CMC is a fantastic community for introducing any crypto platform.And, yes, this is a really active and wonderful community. Wishes for them to have a great reputation and to keep their reputation, activity, and growth.",
         },
 
         {
             source: "Team Shoefy",
             content:
-                " Doing the AMA with Crypto Challengers was an amazing experience. The genuine passion of the community, the contents we were able to present and above all, the very professional way of organizing the AMA by the hosts, gives me all the reasons to do more future AMAs them. Crypto Challengers is worth recommending to others",
+                "It was an incredible experience to do the AMA with CMC. The real enthusiasm of the community, the substance we were able to provide, and, most all, the hosts' extremely professional approach to preparing the AMA gives me every reason to conduct additional AMAs with them in the future. It is worthwhile to promote CMC to others.",
         },
 
         {
             source: "Team GHI",
             content:
-                "The collaboration and responses from CRYPTO CHALLENGERS is firm and swift, I can see there are a lot of p",
+                "So the AMA with the CRYPTO MALLU CLUB was fantastic! First and foremost, I'd want to emphasise how active and knowledgeable their community is. We were asked a terrific set of questions by both the team and the community, and the AMA went off without a hitch with no interruptions and a fantastic reaction from the community! They've been spreading all of our blogs and important developments throughout their networks, as promised. I would enthusiastically recommend them for any assignment.",
+        },
+        {
+            source: "Team Crypto",
+            content:
+                "The people group is exceptionally dynamic and the inquiries coming from the CMC people group are truly noteworthy. This definitely  the  people group we've without exception needed to do AMAs with",
         },
     ];
 
