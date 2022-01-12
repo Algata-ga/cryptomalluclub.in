@@ -704,7 +704,6 @@ a{
 }
 .section8 .cards .card-container {
     width: 25rem;
-    height: 23rem;
     display: flex;
     align-items: center;
     margin: 20px;
@@ -726,14 +725,16 @@ a{
     width: auto;
     height: 13rem;
 }
-.section8 .cards .card-container .card2 {
+.section8 .cards .card-container .card2{
     width: 45rem;
     height: 20rem;
     position: relative;
+    top: 15px;
     right: -25px;
     left: 0px;
     align-self: flex-end;
     border-radius: 20px;
+    font-size: 1rem;
     color: #0c0d08;
     background: #e5e5e5;
     border-radius: 7.90228px;
@@ -1316,9 +1317,13 @@ footer .follow ul li{
     .section8 .cards .card-container {
         width: 20rem;
     }
+    .section8 .cards .card-container .card2 p i{
+        font-size: .8rem !important;
+    }
     .section8 .cards .card-container .card1 {
         width: 27rem;
         height: 10rem;
     }
+    
 }
 
