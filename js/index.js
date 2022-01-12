@@ -18,6 +18,60 @@ HTMLElement.prototype.serialize = function () {
     return res;
 };
 
+const accordian = document.getElementsByClassName("contents");
+
+for (i = 0; i < accordian.length; i++) {
+    accordian[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+    });
+}
+
+function testimonials() {
+    const testimonials_data = [
+        {
+            source: "Team ABC",
+            content:
+                "The collaboration and responses from CRYPTO CHALLENGERS is firm and swift, I can see there are a lot of p",
+        },
+
+        {
+            source: "Team BCD",
+            content:
+                "The collaboration and responses from CRYPTO CHALLENGERS is firm and swift, I can see there are a lot of p",
+        },
+
+        {
+            source: "Team DEF",
+            content:
+                "The collaboration and responses from CRYPTO CHALLENGERS is firm and swift, I can see there are a lot of p",
+        },
+
+        {
+            source: "Team GHI",
+            content:
+                "The collaboration and responses from CRYPTO CHALLENGERS is firm and swift, I can see there are a lot of p",
+        },
+    ];
+
+    const testimonials_source = document.getElementById("testimonial_source");
+    const testimonials_content = document.getElementById("testimonial_content");
+
+    let i = 0;
+
+    testimonials_source.innerHTML = testimonials_data[0].source;
+    testimonials_content.innerHTML = testimonials_data[0].content;
+
+    function next() {
+        i++;
+        const testimonial = testimonials_data[i % testimonials_data.length];
+        testimonials_source.innerHTML = testimonial.source;
+        testimonials_content.innerHTML = testimonial.content;
+        console.log(testimonial);
+    }
+
+    return next;
+}
+
 ready(function () {
     document.getElementById("hamburger").addEventListener(
         "click",
@@ -52,12 +106,7 @@ ready(function () {
         },
         false
     );
+
+    const next = testimonials();
+    setInterval(() => next(), 2500);
 });
-
-const accordian = document.getElementsByClassName("contents");
-
-for (i = 0; i < accordian.length; i++) {
-    accordian[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-    });
-}
