@@ -17,6 +17,27 @@
 body {
     width: 100%;
 }
+.nav-links ul li a{
+    text-decoration: none;
+    color: #0c0d08;
+}
+.nav-links ul li a:hover{
+    color: #414457;
+}
+.contactmem a{
+    color: #0c0d08;
+}
+.contactmem a:hover{
+    color: #414457;
+}
+footer li a{
+    text-decoration: none;
+    color: #e5e7eb;
+
+}
+footer li a:hover{
+    color: #b6dbfd;
+}
 
 /*main*/
 #particles-js {
@@ -552,7 +573,7 @@ a{
 }
 .section7 .desc h1 {
     margin-bottom: 20px;
-    width: 90%;
+    width: 80%;
     font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -571,7 +592,7 @@ a{
     font-weight: normal;
     font-size: 1rem;
     /* identical to box height */
-    text-align: center;
+    text-align: center;80%
     text-transform: capitalize;
 }
 
@@ -1033,6 +1054,9 @@ footer .follow ul li{
     .nav-links ul li {
         list-style: none;
     }
+    .nav-links ul {
+        position: fixed;
+    }
     .mob .contact {
         width: 10%;
         display: flex;
@@ -1086,7 +1110,7 @@ footer .follow ul li{
         padding: 2rem 0rem;
         align-self: center;
         position: relative;
-        top: -15px;
+        top: 40vh;
     }
     .smalldesc h5{
         max-width: 90%;
@@ -1104,6 +1128,7 @@ footer .follow ul li{
         display: none;
     }
     #check:checked ~ .li-collapse {
+
         display: block;
         
     }
@@ -1115,16 +1140,24 @@ footer .follow ul li{
         
     }
     .li-collapse {
-        width: 75%;
+        width: 55%;
         display: flex;
         text-align: left;
         flex-direction: column;
-        background: #bdacf3;
+        backdrop-filter: blur(5px) brightness(80%);
         display: none;
+        margin-left: 20px;
     }
     .open {
         clip-path: circle(1000px at 0% 0%);
         -webkit-clip-path: circle(1500px at 0% 0%);
+    }
+    .hero h1{
+        font-size: 1.3rem;
+        line-height: 2.5rem;
+    }
+    .hero p{
+        font-size: 1.1rem;
     }
     .section3 {
         height: 72vh;
@@ -1132,7 +1165,7 @@ footer .follow ul li{
         flex-direction: column;
         position: relative;
         align-items: center;
-        padding-bottom: 25vh;
+        padding-bottom: 33vh;
     }
     .section3 .mobile {
         width: 100%;
@@ -1165,7 +1198,7 @@ footer .follow ul li{
         height: 100%;
         padding-left: 0;
     }
-    .section4 .partner {
+    .partner {
         flex-basis: 40%;
     }
     footer section {
@@ -1223,16 +1256,37 @@ footer .follow ul li{
     h3 {
         width: 80%;
     }
-
+    
     .hero .buttons {
         flex-direction: column;
         align-items: center;
     }
     .hero .buttons button {
-        margin-top: 10px;
+        margin-top: 30px;
     }
     .section2 {
         height: 45vh;
+    }
+    .section2 h1{
+        font-size: 2.1rem;
+    }
+    .section2 p {
+        text-align: left;
+    }
+    .section3 {
+        padding-bottom: 35vh;
+    }
+    .section3 .desc h1,.section4 .desc h1,.section5 .desc h1,.section6 .desc h1,.section7 .desc h1,.section8 .desc h1,.section9 .desc h1{
+        font-size: 1.8rem;
+        text-align: left;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .section3 .desc p,.section4 .desc p,.section5 .desc p,.section6 .desc p,.section7 .desc p,.section8 .desc p,.section9 .desc p{
+        font-size: 1.1rem;
+        text-align: left;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     .section3 .mobile img {
         width: auto;
@@ -1262,7 +1316,7 @@ footer .follow ul li{
     }
     .section3 {
         height: 77vh;
-        padding-bottom: 30vh;
+        padding-bottom: 40vh;
     }
     .section3 .mobile {
         height: 200%;
