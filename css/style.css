@@ -226,6 +226,7 @@ footer li a:hover{
     align-items: center;
 }
 .section2 h1 {
+    width: 80%;
     padding-bottom: 30px;
     font-family: "Open Sans", sans-serif;
     font-style: normal;
@@ -235,9 +236,10 @@ footer li a:hover{
     /* identical to box height */
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    text-align: center;
 }
 .section2 p {
-    width: 75%;
+    width: 80%;
 
     font-family: "Work Sans", sans-serif;
     font-style: normal;
@@ -592,7 +594,7 @@ a{
     font-weight: normal;
     font-size: 1rem;
     /* identical to box height */
-    text-align: center;80%
+    text-align: center;
     text-transform: capitalize;
 }
 
@@ -1269,6 +1271,7 @@ footer .follow ul li{
     }
     .section2 h1{
         font-size: 2.1rem;
+        text-align: left;
     }
     .section2 p {
         text-align: left;
