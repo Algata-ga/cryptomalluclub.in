@@ -34,7 +34,19 @@ function createAMACard(ama) {
     card_img.src = ama.thumbnail;
     card_img.alt = "";
 
+    const card_title = document.createElement("h3");
+    card_title.innerHTML = ama.title.substring(12);
+
+    const card_date = document.createElement("h4");
+    const date = new Date(ama.pubDate);
+
+    card_date.innerHTML = `${date.getDate()} ${date.toLocaleString("default", {
+        month: "short",
+    })} ${date.getFullYear()}`;
+
     card_href.appendChild(card_img);
+    card_href.appendChild(card_title);
+    card_href.appendChild(card_date);
     card_div.appendChild(card_href);
 
     return card_div;
