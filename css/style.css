@@ -328,6 +328,8 @@ footer li a:hover {
     border-radius: 8px;
     font-size: 1rem;
     margin-top: 20px;
+    cursor: pointer;
+
 }
 .section3 button .fas {
     font-size: 1rem;
@@ -513,9 +515,14 @@ a {
     border-top-left-radius: 60px;
     border-bottom-right-radius: 60px;
     position: relative;
-    background: #1f1f1f;
+    background: linear-gradient(135deg, #111111 16.24%, #3C3C3C 132.15%);
+    box-sizing: border-box;
     border-right: 2px solid #3a3a3a;
     border-bottom: 2px solid #3a3a3a;
+}
+.section6 .cards .container .card:hover{
+    box-shadow: 0px 0px 14.2183px rgba(90, 90, 90, 0.25);
+
 }
 .section6 .cards .container .card .icon {
     width: 120px;
@@ -1309,9 +1316,6 @@ footer .follow ul li {
         width: 90%;
         height: 25rem;
         font-size: .9rem;
-    }
-    .testimonial .container .box .content{
-        
     }
     .section5 .stat {
         width: 10rem;
