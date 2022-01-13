@@ -136,11 +136,22 @@ footer li a:hover {
     background: #bdacf3;
     color: #0c0d08;
     border-radius: 15px;
-    width: auto;
+    width: 300px;
     position: fixed;
     top: 60px;
     right: 40px;
     padding: 2rem 2rem;
+}
+.contact .contactmem h3,.contact .contactmem h4{
+    margin-bottom: 20px;
+}
+.contact .contactmem img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: gold;
+    float: left;
+    margin-top: .1rem;
 }
 .contact:hover .contactmem {
     display: block;
@@ -414,7 +425,7 @@ a {
     background-image: linear-gradient(
             155.1deg,
             rgb(0, 0, 0) 25.75%,
-            rgba(0, 0, 0, 0.9) 70.35%
+            #20211c 90.35%
         ),
         linear-gradient(
             105.07deg,
@@ -518,7 +529,7 @@ a {
     background-image: linear-gradient(
             155.1deg,
             rgb(0, 0, 0) 25.75%,
-            rgba(0, 0, 0, 0.9) 70.35%
+            #20211c 90.35%
         ),
         linear-gradient(
             105.07deg,
@@ -609,9 +620,11 @@ a {
 }
 .testimonial .container .box {
     width: 60%;
+    height: 22rem;
+    display: flex;
+    align-items: center;
     text-align: center;
     background: #b8aef3;
-    padding-top: 20px;
     margin-top: 20px;
 }
 
@@ -784,6 +797,8 @@ a {
     padding: 10px;
     background: #bdacf3;
     color: #0c0d08;
+    font-family: "Roboto", sans-serif;
+    font-weight: bolder;
 }
 .accordian .contents .label::before {
     font-family: "Font Awesome 5 Free";
@@ -796,17 +811,20 @@ a {
 }
 .accordian .contents .content {
     position: relative;
-    background: #bdacf3;
+    background: #0c0d08;
     height: 0;
     overflow: hidden;
     overflow-y: auto;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
 }
 .accordian .contents.active .label::before {
     content: "\f077";
 }
 .accordian .contents.active .content {
-    height: 150px;
-    padding: 10px;
+    height: max-content;
+    padding: 20px 10px;
+
 }
 
 /*footer*/
@@ -1289,6 +1307,11 @@ footer .follow ul li {
 
     .testimonial .container .box {
         width: 90%;
+        height: 25rem;
+        font-size: .9rem;
+    }
+    .testimonial .container .box .content{
+        
     }
     .section5 .stat {
         width: 10rem;
@@ -1326,6 +1349,9 @@ footer .follow ul li {
     }
     .section8 .cards .card-container {
         width: 18rem;
+    }
+    .section8 .cards .card-container .card2{
+        height: 21rem;
     }
     .section8 .cards .card-container .card2 p i {
         font-size: 0.7rem !important;
