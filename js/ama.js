@@ -15,4 +15,3 @@ ready(function () {
         false
     );
 });
-

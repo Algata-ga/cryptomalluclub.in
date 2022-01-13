@@ -40,7 +40,7 @@ footer li a:hover {
 
 /*main*/
 #particles-js {
-    background-image: url("../assets/bckg.jpg");
+    background-image: url("../assets/bckg.webp");
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
