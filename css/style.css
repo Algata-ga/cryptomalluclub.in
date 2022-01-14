@@ -424,17 +424,9 @@ a {
     border-radius: 50%;
     border: 6px solid;
     border: double 6px transparent;
-    background-image: linear-gradient(
-            155.1deg,
-            rgb(0, 0, 0) 25.75%,
-            #20211c 90.35%
-        ),
-        linear-gradient(
-            105.07deg,
-            #700b97 -7.71%,
-            #6767e7 47.1%,
-            #8e54e9 101.92%
-        );
+    background-image: linear-gradient( 
+155.1deg, rgb(0, 0, 0) 13.75%, #20211c 70.35% ), linear-gradient( 
+105.07deg, #700b97 -7.71%, #6767e7 47.1%, #8e54e9 101.92% );
     background-origin: border-box;
     background-clip: content-box, border-box;
     margin: 20px;
@@ -535,14 +527,14 @@ a {
     border: double 4px transparent;
     background-image: linear-gradient(
             155.1deg,
-            rgb(0, 0, 0) 25.75%,
-            #20211c 90.35%
+            #111111 25.75%,
+            #3c3c3c 90.35%
         ),
         linear-gradient(
             105.07deg,
-            #700b97 -7.71%,
+            #6767e7 -7.71%,
             #6767e7 47.1%,
-            #8e54e9 101.92%
+            #6767e7 101.92%
         );
     background-origin: border-box;
     background-clip: content-box, border-box;
@@ -580,7 +572,7 @@ a {
     font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     /* identical to box height */
     letter-spacing: 0.02em;
     text-transform: capitalize;
@@ -626,13 +618,14 @@ a {
     align-items: center;
 }
 .testimonial .container .box {
-    width: 60%;
+    width: 50%;
     height: 22rem;
     display: flex;
     align-items: center;
     text-align: center;
     background: #b8aef3;
     margin-top: 20px;
+    padding: 1rem 0rem;
 }
 
 .iconify {
@@ -1027,6 +1020,9 @@ footer .follow ul li {
     .section6 .cards .container {
         grid-template-columns: repeat(2, 1fr);
     }
+    .testimonial .container .box {
+        width: 70%;
+    }
     .section8 .cards {
         grid-template-columns: 1fr;
     }
@@ -1315,7 +1311,7 @@ footer .follow ul li {
     .testimonial .container .box {
         width: 90%;
         height: 25rem;
-        font-size: .9rem;
+        font-size: .95rem;
     }
     .section5 .stat {
         width: 10rem;
@@ -1355,7 +1351,7 @@ footer .follow ul li {
         width: 18rem;
     }
     .section8 .cards .card-container .card2{
-        height: 21rem;
+        height: 22rem;
     }
     .section8 .cards .card-container .card2 p i {
         font-size: 0.7rem !important;
