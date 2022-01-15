@@ -8,7 +8,6 @@ live : build
 	scp site-cryptochallenger.tar.gz ajrx@server.algata.ga:/home/ajrx/
 clean :
 	rm -rf dist &> /dev/null
-	rm -rf ama-r/build &> /dev/null
 	rm site-cryptochallenger.tar.gz &> /dev/null
 
 
