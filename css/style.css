@@ -1111,9 +1111,6 @@ footer .follow ul li {
     .nav-links ul li {
         list-style: none;
     }
-    .nav-links ul {
-        position: fixed;
-    }
     .mob .contact {
         width: 10%;
         display: flex;
@@ -1139,18 +1136,22 @@ footer .follow ul li {
     }
     .nav-links {
         width: 90%;
-        height: 80vh;
+        height: 90vh;
         margin-left: 5%;
         margin-top: 8vh;
         display: flex;
-        color: #0c0d08;
+        overflow-y: scroll;
+        color: white;
         z-index: 100;
         flex-direction: column;
         position: fixed;
-        background-color: #b2b2b4;
+        backdrop-filter: blur(4px) brightness(60%);
         clip-path: circle(0 at 0% 0%);
         -webkit-clip-path: circle(0px at 0% 0%);
         transition: all 1s ease-out;
+    }
+    .nav-links ul li a{
+        color: white;
     }
     .nav-links ul li {
         margin: 3rem 3rem;
@@ -1168,7 +1169,7 @@ footer .follow ul li {
         padding: 2rem 0rem;
         align-self: center;
         position: relative;
-        top: 40vh;
+        top: 15px;
     }
     .smalldesc h5 {
         max-width: 90%;
@@ -1199,7 +1200,7 @@ footer .follow ul li {
         display: flex;
         text-align: left;
         flex-direction: column;
-        backdrop-filter: blur(5px) brightness(80%);
+        backdrop-filter: blur(15px) brightness(100%);
         display: none;
         margin-left: 20px;
     }

@@ -24,6 +24,17 @@ footer li a {
 footer li a:hover {
     color: #b6dbfd;
 }
+
+/*main*/
+#particles-js {
+    background-image: url("../assets/Home\ page.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
 .desk a {
     text-decoration: none;
     color: white;
@@ -75,13 +86,37 @@ footer li a:hover {
 }
 .desk .links .option .sub {
     display: none;
-    background: #bdacf3;
-    width: 450px;
+    background: #c4c4c4;
+    color: #151417;
+    width: 500px;
+    padding: 20px 20px;
+    text-align: left;
+    border-radius: 20px;
+    margin-left: -20px;
+    font-family: 'Roboto', sans-serif;
+    font: 15px;
+}
+.desk .links .option .sub h5{
+    padding-top: 20px;
+}
+.desk .links .option .sub h3{
+    color: #0c0d08;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+    letter-spacing: .05em;
+    font-weight: 700;
+}
+.desk .links .option .sub img{
+    width: 40px;
+    margin-right: 10px;
+    position: relative;
+    top: 12px;
 }
 .desk .links .option .sub ul {
     display: flex;
     flex-direction: column;
     width: max-content;
+    padding-top: 10px;
 }
 .desk .links .option .sub a {
     color: #0c0d08;
@@ -109,18 +144,40 @@ footer li a:hover {
 }
 .contact .contactmem {
     display: none;
-    background: #bdacf3;
+    background: #c4c4c4;
     color: #0c0d08;
     border-radius: 15px;
-    width: auto;
+    width: 220px;
     position: fixed;
     top: 60px;
     right: 40px;
-    padding: 2rem 2rem;
+    padding: 3rem 2rem;
+}
+.contact .contactmem .l{
+    color: #151417;
+    text-align: left;
+    padding-top: 20px;
+}
+.contact .contactmem h3{
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.contact .contactmem h4{
+    margin-bottom: 20px;
+}
+.contact .contactmem img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: gold;
+    float: left;
+    margin-top: .1rem;
+    margin-right: 10px;
 }
 .contact:hover .contactmem {
     display: block;
 }
+
 .mob,
 .nav-links {
     display: none;
@@ -439,9 +496,6 @@ footer .follow ul li {
     .nav-links ul li {
         list-style: none;
     }
-    .nav-links ul {
-        position: fixed;
-    }
     .mob .contact {
         width: 10%;
         display: flex;
@@ -457,23 +511,32 @@ footer .follow ul li {
     .mob .contact a .fas {
         display: none;
     }
-    .mob .contact .contactmem {
-        top: 60px;
+    .mob .contact .contactmem{
+        width: 250px;
+    }
+    .mob .contact .contactmem img{
+        position: relative;
+        top: -8px;
+        margin-right: 20px;
     }
     .nav-links {
         width: 90%;
-        height: 80vh;
+        height: 90vh;
         margin-left: 5%;
         margin-top: 8vh;
         display: flex;
-        color: #0c0d08;
+        overflow-y: scroll;
+        color: white;
         z-index: 100;
         flex-direction: column;
         position: fixed;
-        background-color: #b2b2b4;
+        backdrop-filter: blur(4px) brightness(60%);
         clip-path: circle(0 at 0% 0%);
         -webkit-clip-path: circle(0px at 0% 0%);
         transition: all 1s ease-out;
+    }
+    .nav-links ul li a{
+        color: white;
     }
     .nav-links ul li {
         margin: 3rem 3rem;
@@ -491,7 +554,7 @@ footer .follow ul li {
         padding: 2rem 0rem;
         align-self: center;
         position: relative;
-        top: 40vh;
+        top: 15px;
     }
     .smalldesc h5 {
         max-width: 90%;
@@ -522,7 +585,7 @@ footer .follow ul li {
         display: flex;
         text-align: left;
         flex-direction: column;
-        backdrop-filter: blur(5px) brightness(80%);
+        backdrop-filter: blur(15px) brightness(100%);
         display: none;
         margin-left: 20px;
     }
