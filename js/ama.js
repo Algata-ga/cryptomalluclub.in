@@ -58,9 +58,8 @@ async function renderAMARecaps() {
     const amas_container = document.getElementById("amas_container");
     let innerHTML = "";
     for (let i in amas.items) {
-        console.log(i);
         const child = createAMACard(amas.items[i]);
-        innerHTML = amas_container.innerHTML + child;
+        innerHTML = innerHTML + amas_container.innerHTML + child;
     }
 
     amas_container.innerHTML = innerHTML;
@@ -145,7 +144,7 @@ ready(function () {
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
-          },
+        },
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
