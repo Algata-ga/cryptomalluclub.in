@@ -38,40 +38,25 @@ async function getTwitterRSS() {
 }
 
 function createAMACard(ama) {
-    const card_div = document.createElement("div");
-    card_div.classList.add("card");
-
-    const card_href = document.createElement("a");
-    card_href.href = ama.link;
-
-    const card_img = document.createElement("img");
-    card_img.src = ama.thumbnail;
-    card_img.alt = "";
-
-    const card_title = document.createElement("h3");
-    card_title.innerHTML = ama.title.substring(12);
-
-    const card_date = document.createElement("h4");
     const date = new Date(ama.pubDate);
 
-    card_date.innerHTML = `${date.getDate()} ${date.toLocaleString("default", {
+    const ama_date = `${date.getDate()} ${date.toLocaleString("default", {
         month: "short",
     })} ${date.getFullYear()}`;
 
-    card_href.appendChild(card_img);
-    card_href.appendChild(card_title);
-    card_href.appendChild(card_date);
-    card_div.appendChild(card_href);
+    const card = `<div class="card"><a href=${ama.link}><img src=${
+        ama.thumbnail
+    }></img><h3>${ama.title.substring(12)}</h3><h4>${ama_date}</h4></a></div>`;
 
-    return card_div;
+    return card;
 }
 async function renderAMARecaps() {
     const amas = await getAMA();
 
     const amas_container = document.getElementById("amas_container");
-    for (let i = 1; i < amas.items.length; i++) {
+    for (let i in amas.items) {
         const child = createAMACard(amas.items[i]);
-        amas_container.appendChild(child);
+        amas_container.innerHTML = amas_container.innerHTML + child;
     }
 }
 
