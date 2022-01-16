@@ -120,7 +120,7 @@ footer li a:hover {
     padding-top: 10px;
 }
 .desk .links .option .sub a {
-    color: #0c0d08;
+    color: white;
 }
 .desk .links .option .sub ul li {
     padding: 0.5rem 0.5rem;
@@ -148,10 +148,11 @@ footer li a:hover {
     background: rgba(72, 76, 108, 0.72);
     color: white;
     border-radius: 15px;
+    border-radius: 20px 0 20px 20px;
     width: 220px;
     position: fixed;
     top: 60px;
-    right: 40px;
+    right: 20px;
     padding: 1rem 2rem;
 }
 .contact .contactmem .l {
@@ -181,8 +182,8 @@ footer li a:hover {
 }
 .contact .contactmem img {
     width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
+    height: auto;
+    border-radius: 25px;
     background: gold;
     float: left;
     margin-top: 0.1rem;
@@ -196,6 +197,16 @@ footer li a:hover {
 .mob,
 .nav-links {
     display: none;
+}
+.upcoming{
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.2rem;
+    text-align: center;
+    padding-top: 100px;
+    color: white;
+    
 }
 .Section1 {
     background: linear-gradient(
@@ -213,8 +224,11 @@ footer li a:hover {
 }
 .mainimg img {
     width: 65%;
-    margin-top: 6rem;
+    margin-top: 3rem;
     margin-bottom: 3rem;
+}
+.swiper-pagination-bullet{
+    background: white !important;
 }
 .section2 {
     width: 100%;
@@ -296,7 +310,7 @@ footer li a:hover {
 }
 .sec3 .cards .container .card a img {
     width: 85%;
-    height: 200px;
+    height: auto;
     padding: 0px 8px;
     margin-left: 5%;
 }
@@ -354,7 +368,7 @@ form {
 }
 
 .feedback-input {
-    color: #9a9ea5;
+    color: #000000;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -656,6 +670,7 @@ footer .follow ul li {
     }
     .sec3 .cards .container .card a img {
         width: 90%;
+        height: auto;
         margin: 2%;
     }
 }

@@ -136,6 +136,7 @@ footer li a:hover {
 }
 .desk .links .option .sub ul li {
     padding: 0.5rem 0.5rem;
+
 }
 .desk .links .option:hover .sub {
     display: block;
@@ -162,9 +163,10 @@ footer li a:hover {
     color: white;
     border-radius: 15px;
     width: 220px;
+    border-radius: 20px 0 20px 20px;
     position: fixed;
     top: 60px;
-    right: 40px;
+    right: 20px;
     padding: 1rem 2rem;
 }
 .contact .contactmem .l {
@@ -188,8 +190,8 @@ footer li a:hover {
 }
 .contact .contactmem img {
     width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
+    height: auto;
+    border-radius: 25px;
     background: gold;
     float: left;
     margin-top: 0.1rem;
@@ -399,7 +401,6 @@ a {
 .partnerbox .partimg {
     width: 18rem;
     height: 5rem;
-    flex-basis: 25%;
     border-radius: 15px;
     background: #3b3c38;
     margin: 20px;
@@ -407,12 +408,12 @@ a {
     justify-content: center;
     align-items: center;
 }
-.partnerbox .partimg img {
+.partnerbox .partimg a img {
     width: 15rem;
     margin: 1rem;
 }
-.partnerbox .partimg .circleimg {
-    width: 5rem;
+.partnerbox .circleimg a img{
+    width: 5rem !important;
 }
 
 /*section5*/
@@ -880,6 +881,7 @@ a {
     overflow-y: auto;
     font-family: "Roboto", sans-serif;
     font-weight: bold;
+    transition: .5s;
 }
 .accordian .contents.active .label::before {
     content: "\f077";
@@ -936,7 +938,7 @@ form {
 }
 
 .feedback-input {
-    color: #9a9ea5;
+    color: #000000;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
