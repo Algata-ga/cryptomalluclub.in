@@ -35,7 +35,7 @@ function testimonials() {
         },
 
         {
-            source: "Team Bigone Exchangel",
+            source: "Team Bigone Exchange",
             content:
                 "CMC is a fantastic community for introducing any crypto platform.And, yes, this is a really active and wonderful community. Wishes for them to have a great reputation and to keep their reputation, activity, and growth.",
         },

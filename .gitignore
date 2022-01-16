@@ -1,3 +1,4 @@
 .parcel-cache/
 ama-r/node_modules/
 dist/
+*.tar.gz
