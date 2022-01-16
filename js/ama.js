@@ -108,14 +108,20 @@ function parse_and_reduce(tweets) {
     return upcomingAMAs;
 }
 async function renderUpcomingAMA() {
+    const upcomingAMAsDOM = document.getElementById("upcomingAMAs");
+
     const tweets = await getTwitterRSS();
     const upcomingAMAs = parse_and_reduce(tweets.items);
-    const main_img = document.createElement("img");
-    main_img.src = upcomingAMAs[0];
-    main_img.alt = "Most Recent AMA";
-    console.log(upcomingAMAs);
-    const mainImageAMA = document.getElementById("mainimg_ama");
-    mainImageAMA.appendChild(main_img);
+
+    let innerHTML = "";
+
+    for (let i in upcomingAMAs) {
+        innerHTML =
+            innerHTML +
+            `<div class="swiper-slide"><div class="mainimg"><img src=${upcomingAMAs[i]} alt="recent ama 1"></img></div></div>`;
+    }
+
+    upcomingAMAsDOM.innerHTML = innerHTML;
 }
 
 ready(function () {
@@ -132,6 +138,24 @@ ready(function () {
     const year = date.getFullYear();
     const copyright_str = `<i class="far fa-copyright"></i> ${year} <a href="#">CMC</a> All Rights Reserved`;
     copyright.innerHTML = copyright_str;
+
+    var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
 
     renderUpcomingAMA();
     renderAMARecaps();
