@@ -40,7 +40,7 @@ footer li a:hover {
 
 /*main*/
 #particles-js {
-    background-image: url("../assets/Home\ page.jpg");
+    background-image: url("../assets/home_page.webp");
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
@@ -106,20 +106,20 @@ footer li a:hover {
     text-align: left;
     border-radius: 20px;
     margin-left: -20px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font: 15px;
 }
-.desk .links .option .sub h5{
+.desk .links .option .sub h5 {
     padding-top: 20px;
 }
-.desk .links .option .sub h3{
+.desk .links .option .sub h3 {
     color: #0c0d08;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-size: 22px;
-    letter-spacing: .05em;
+    letter-spacing: 0.05em;
     font-weight: 700;
 }
-.desk .links .option .sub img{
+.desk .links .option .sub img {
     width: 40px;
     margin-right: 10px;
     position: relative;
@@ -166,25 +166,25 @@ footer li a:hover {
     right: 40px;
     padding: 3rem 2rem;
 }
-.contact .contactmem .l{
+.contact .contactmem .l {
     color: #151417;
     text-align: left;
     padding-top: 20px;
 }
-.contact .contactmem h3{
+.contact .contactmem h3 {
     font-weight: 600;
     margin-bottom: 20px;
 }
-.contact .contactmem h4{
+.contact .contactmem h4 {
     margin-bottom: 20px;
 }
-.contact .contactmem img{
+.contact .contactmem img {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
     background: gold;
     float: left;
-    margin-top: .1rem;
+    margin-top: 0.1rem;
     margin-right: 10px;
 }
 .contact:hover .contactmem {
@@ -363,7 +363,6 @@ footer li a:hover {
     font-size: 1rem;
     margin-top: 20px;
     cursor: pointer;
-
 }
 .section3 button .fas {
     font-size: 1rem;
@@ -458,9 +457,17 @@ a {
     border-radius: 50%;
     border: 6px solid;
     border: double 6px transparent;
-    background-image: linear-gradient( 
-155.1deg, rgb(0, 0, 0) 13.75%, #20211c 70.35% ), linear-gradient( 
-105.07deg, #700b97 -7.71%, #6767e7 47.1%, #8e54e9 101.92% );
+    background-image: linear-gradient(
+            155.1deg,
+            rgb(0, 0, 0) 13.75%,
+            #20211c 70.35%
+        ),
+        linear-gradient(
+            105.07deg,
+            #700b97 -7.71%,
+            #6767e7 47.1%,
+            #8e54e9 101.92%
+        );
     background-origin: border-box;
     background-clip: content-box, border-box;
     margin: 20px;
@@ -542,21 +549,20 @@ a {
     border-top-left-radius: 60px;
     border-bottom-right-radius: 60px;
     position: relative;
-    background: linear-gradient(135deg, #111111 16.24%, #3C3C3C 132.15%);
+    background: linear-gradient(135deg, #111111 16.24%, #3c3c3c 132.15%);
     box-sizing: border-box;
     border-right: 2px solid #3a3a3a;
     border-bottom: 2px solid #3a3a3a;
 }
-.section6 .cards .container .card h3{
+.section6 .cards .container .card h3 {
     margin-top: 60%;
     text-align: center;
     font-size: 1.5rem;
     margin-left: 10px;
     margin-right: 10px;
 }
-.section6 .cards .container .card:hover{
+.section6 .cards .container .card:hover {
     box-shadow: 0px 0px 14.2183px rgba(90, 90, 90, 0.25);
-
 }
 .section6 .cards .container .card .icon {
     width: 120px;
@@ -567,9 +573,13 @@ a {
     justify-content: center;
     align-items: center;
     border: double 4px transparent;
-    background-image: linear-gradient( 
-        135.1deg, #111111 16.24%, #3c3c3c 132.15%), linear-gradient( 
-        105.07deg, #6767e7 -7.71%, #6767e7 47.1%, #6767e7 101.92% );
+    background-image: linear-gradient(135.1deg, #111111 16.24%, #3c3c3c 132.15%),
+        linear-gradient(
+            105.07deg,
+            #6767e7 -7.71%,
+            #6767e7 47.1%,
+            #6767e7 101.92%
+        );
     background-origin: border-box;
     background-clip: content-box, border-box;
     border-radius: 50%;
@@ -580,8 +590,9 @@ a {
     left: -6px;
     right: 0;
 }
-.section6 .cards .container .card .icon .fas,.section6 .cards .container .card .icon .fab{
-    font-size: 3.50rem;
+.section6 .cards .container .card .icon .fas,
+.section6 .cards .container .card .icon .fab {
+    font-size: 3.5rem;
     color: #6767e7;
 }
 
@@ -862,7 +873,6 @@ a {
 .accordian .contents.active .content {
     height: max-content;
     padding: 20px 10px;
-
 }
 
 /*footer*/
@@ -1020,12 +1030,12 @@ footer .follow ul li {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
 }
-.copy a{
+.copy a {
     text-decoration: none;
     color: white;
     margin: 0px 5px;
 }
-.copy a:hover{
+.copy a:hover {
     color: #bdacf3;
 }
 .copy .far {
@@ -1126,10 +1136,10 @@ footer .follow ul li {
     .mob .contact a .fas {
         display: none;
     }
-    .mob .contact .contactmem{
+    .mob .contact .contactmem {
         width: 250px;
     }
-    .mob .contact .contactmem img{
+    .mob .contact .contactmem img {
         position: relative;
         top: -8px;
         margin-right: 20px;
@@ -1150,7 +1160,7 @@ footer .follow ul li {
         -webkit-clip-path: circle(0px at 0% 0%);
         transition: all 1s ease-out;
     }
-    .nav-links ul li a{
+    .nav-links ul li a {
         color: white;
     }
     .nav-links ul li {
@@ -1357,13 +1367,13 @@ footer .follow ul li {
         margin-bottom: 10px;
     }
     .section3 .mobile img {
-        width: auto;   
+        width: auto;
     }
 
     .testimonial .container .box {
         width: 90%;
         height: 25rem;
-        font-size: .95rem;
+        font-size: 0.95rem;
     }
     .section5 .stat {
         width: 10rem;
@@ -1405,7 +1415,7 @@ footer .follow ul li {
     .section8 .cards .card-container {
         width: 18rem;
     }
-    .section8 .cards .card-container .card2{
+    .section8 .cards .card-container .card2 {
         height: 22rem;
     }
     .section8 .cards .card-container .card2 p i {

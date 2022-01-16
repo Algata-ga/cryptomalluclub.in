@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
     width: 100vw;
@@ -27,7 +27,7 @@ footer li a:hover {
 
 /*main*/
 #particles-js {
-    background-image: url("../assets/Home\ page.jpg");
+    background-image: url("../assets/home_page.webp");
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
@@ -93,20 +93,20 @@ footer li a:hover {
     text-align: left;
     border-radius: 20px;
     margin-left: -20px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font: 15px;
 }
-.desk .links .option .sub h5{
+.desk .links .option .sub h5 {
     padding-top: 20px;
 }
-.desk .links .option .sub h3{
+.desk .links .option .sub h3 {
     color: #0c0d08;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-size: 22px;
-    letter-spacing: .05em;
+    letter-spacing: 0.05em;
     font-weight: 700;
 }
-.desk .links .option .sub img{
+.desk .links .option .sub img {
     width: 40px;
     margin-right: 10px;
     position: relative;
@@ -153,25 +153,25 @@ footer li a:hover {
     right: 40px;
     padding: 3rem 2rem;
 }
-.contact .contactmem .l{
+.contact .contactmem .l {
     color: #151417;
     text-align: left;
     padding-top: 20px;
 }
-.contact .contactmem h3{
+.contact .contactmem h3 {
     font-weight: 600;
     margin-bottom: 20px;
 }
-.contact .contactmem h4{
+.contact .contactmem h4 {
     margin-bottom: 20px;
 }
-.contact .contactmem img{
+.contact .contactmem img {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
     background: gold;
     float: left;
-    margin-top: .1rem;
+    margin-top: 0.1rem;
     margin-right: 10px;
 }
 .contact:hover .contactmem {
@@ -182,18 +182,22 @@ footer li a:hover {
 .nav-links {
     display: none;
 }
-.Section1{
-    background: rgb(62,53,123);
-    background: linear-gradient(180deg, rgba(62,53,123,1) 0%, rgba(28,23,55,1) 68%, rgba(9,7,18,1) 100%);
+.Section1 {
+    background: rgb(62, 53, 123);
+    background: linear-gradient(
+        180deg,
+        rgba(62, 53, 123, 1) 0%,
+        rgba(28, 23, 55, 1) 68%,
+        rgba(9, 7, 18, 1) 100%
+    );
     width: 100%;
 }
-.mainimg{
+.mainimg {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
-.mainimg img{
+.mainimg img {
     width: 65%;
     margin-top: 6rem;
     margin-bottom: 3rem;
@@ -233,9 +237,8 @@ footer li a:hover {
     text-transform: capitalize;
 }
 
-
 /*sec3*/
-.sec3{
+.sec3 {
     padding-bottom: 5rem;
     background: black;
     display: flex;
@@ -244,13 +247,13 @@ footer li a:hover {
     flex-direction: column;
     color: white;
 }
-.sec3 .cards{
+.sec3 .cards {
     width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.sec3 .cards .container{
+.sec3 .cards .container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -259,7 +262,7 @@ footer li a:hover {
     justify-items: center;
     margin-top: 5rem;
 }
-.sec3 .cards .container .card{
+.sec3 .cards .container .card {
     margin: 20px;
     max-width: 24rem;
     height: 400px;
@@ -281,17 +284,17 @@ footer li a:hover {
         );
     background-origin: border-box;
     background-clip: content-box, border-box;
-
 }
-.sec3 .cards .container .card a img{
+.sec3 .cards .container .card a img {
     width: 85%;
     height: 200px;
     padding: 0px 8px;
 }
-.sec3 .cards .container .card a{
+.sec3 .cards .container .card a {
     text-decoration: none;
 }
-.sec3 .cards .container .card a h3,.sec3 .cards .container .card a h4{
+.sec3 .cards .container .card a h3,
+.sec3 .cards .container .card a h4 {
     margin: 15px 20px;
     color: white;
 }
@@ -453,18 +456,18 @@ footer .follow ul li {
     margin-right: 3px;
 }
 @media (max-width: 992px) {
-    .sec3 .cards .container .card a img{
+    .sec3 .cards .container .card a img {
         padding: 10px;
     }
 }
 
 @media (max-width: 857px) {
-    .sec3 .cards .container .card{
+    .sec3 .cards .container .card {
         max-width: 20rem;
         width: 100% !important;
         margin: 20px 20px;
     }
-    .sec3 .cards .container .card img{
+    .sec3 .cards .container .card img {
         width: 90%;
         padding: 10px;
         padding-top: 25px;
@@ -521,10 +524,10 @@ footer .follow ul li {
     .mob .contact a .fas {
         display: none;
     }
-    .mob .contact .contactmem{
+    .mob .contact .contactmem {
         width: 250px;
     }
-    .mob .contact .contactmem img{
+    .mob .contact .contactmem img {
         position: relative;
         top: -8px;
         margin-right: 20px;
@@ -545,7 +548,7 @@ footer .follow ul li {
         -webkit-clip-path: circle(0px at 0% 0%);
         transition: all 1s ease-out;
     }
-    .nav-links ul li a{
+    .nav-links ul li a {
         color: white;
     }
     .nav-links ul li {
@@ -682,16 +685,17 @@ footer .follow ul li {
     }
 }
 @media (max-width: 400px) {
-    .sec3 .cards .container{
+    .sec3 .cards .container {
         margin: 5px;
     }
-    .sec3 .cards .container .card{
+    .sec3 .cards .container .card {
         width: 100% !important;
         margin: 20px 0px;
     }
-    .sec3 .cards .container .card a img{
+    .sec3 .cards .container .card a img {
         width: 90%;
         padding: 10px;
         padding-top: 25px;
     }
 }
+
