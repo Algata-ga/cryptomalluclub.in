@@ -100,7 +100,7 @@ ready(function () {
         "submit",
         function (e) {
             const google_script_url =
-                "https://script.google.com/macros/s/AKfycbx8P9tgMBuI27gVchzeM6Yj2oxlZnJulQdqPKhjtNbW8Y4iq-uGQW0tYYJowDgRmlrB/exec";
+                "https://script.google.com/macros/s/AKfycbxSDYjtSJ4ZxDEP8dhk-DSLRs5whtA-K9ISosLt_IZ5p5EAKUaHds4iKfSg89z7UrdY/exec";
 
             const request = new XMLHttpRequest();
             request.open("POST", google_script_url, true);
