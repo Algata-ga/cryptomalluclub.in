@@ -874,6 +874,7 @@ a {
 .accordian .contents .content {
     position: relative;
     background: #181a13d5;
+    color: #ffffff;
     height: 0;
     overflow: hidden;
     overflow-y: auto;
