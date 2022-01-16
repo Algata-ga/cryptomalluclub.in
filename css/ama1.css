@@ -138,34 +138,39 @@ footer li a:hover {
 }
 .contact .contactmem {
     display: none;
-    background: #c4c4c4;
-    color: #0c0d08;
+    background: rgba(72, 76, 108, 0.72);
+    color: white;
     border-radius: 15px;
     width: 220px;
     position: fixed;
     top: 60px;
-    right: 20px;
-    padding: 3rem 2rem;
-}
-.contact .contactmem a{
-    text-decoration: none;
+    right: 40px;
+    padding: 1rem 2rem;
 }
 .contact .contactmem .l{
     color: #151417;
     text-align: left;
-    text-decoration: none;
-    padding-bottom: 20px;
+    margin-top: 40px;
 }
+.contact .contactmem .l:hover{
+    background: rgba(72, 76, 108, 1);
+}
+.contact .contactmem a{
+    text-decoration: none;
+}
+
 .contact .contactmem h3{
     font-weight: 600;
 }
 .contact .contactmem h6{
     margin-block-start: 1rem;
     margin-block-end: 1rem;
+    color: white;
 }
 .contact .contactmem h4{
     margin-block-start: 0px;
     margin-block-end: 0;
+    color: white;
 }
 .contact .contactmem img{
     width: 3rem;
@@ -532,12 +537,14 @@ footer .follow ul li {
     }
     .nav-links {
         width: 90%;
-        height: 90vh;
+        height: 80vh;
         margin-left: 5%;
         margin-top: 8vh;
         display: flex;
         overflow-y: scroll;
         color: white;
+        background: rgba(72, 76, 108, .8);
+
         z-index: 100;
         flex-direction: column;
         position: fixed;
@@ -545,6 +552,9 @@ footer .follow ul li {
         clip-path: circle(0 at 0% 0%);
         -webkit-clip-path: circle(0px at 0% 0%);
         transition: all 1s ease-out;
+    }
+    .nav-links:hover{
+        background: rgba(72, 76, 108, 1);
     }
     .nav-links ul li a{
         color: white;
@@ -554,31 +564,7 @@ footer .follow ul li {
         text-align: left;
         transition: 0.5s ease;
     }
-    .smalldesc {
-        background: #9676d7;
-        width: 85%;
-        display: flex;
-        position: fixed;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 2rem 0rem;
-        align-self: center;
-        position: relative;
-        top: 15px;
-    }
-    .smalldesc h5 {
-        max-width: 90%;
-    }
-    .smalldesc button {
-        width: 150px;
-        height: 40px;
-        margin-top: 10px;
-        border-radius: 7px;
-        border: none;
-        background: #a028d3;
-        color: white;
-    }
+    
     #check {
         display: none;
     }
@@ -596,7 +582,6 @@ footer .follow ul li {
         display: flex;
         text-align: left;
         flex-direction: column;
-        backdrop-filter: blur(15px) brightness(100%);
         display: none;
         margin-left: 20px;
     }
