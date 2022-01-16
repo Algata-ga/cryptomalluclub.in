@@ -186,7 +186,17 @@ footer li a:hover {
     background: rgb(62,53,123);
     background: linear-gradient(180deg, rgba(62,53,123,1) 0%, rgba(28,23,55,1) 68%, rgba(9,7,18,1) 100%);
     width: 100%;
-    height: 70vh;
+}
+.mainimg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.mainimg img{
+    width: 65%;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
 }
 .section2 {
     width: 100%;
@@ -251,7 +261,7 @@ footer li a:hover {
 }
 .sec3 .cards .container .card{
     margin: 20px;
-    max-width: 22rem;
+    max-width: 24rem;
     height: 400px;
     border-top-right-radius: 60px;
     border-bottom-right-radius: 60px;
