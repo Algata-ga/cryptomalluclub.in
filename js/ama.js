@@ -53,10 +53,16 @@ function createAMACard(ama) {
 }
 async function renderAMA() {
     const amas = await getAMA();
+
+    const main_img = document.createElement("img");
+    main_img.src = amas.items[0].thumbnail;
+    main_img.alt = "Most Recent AMA";
+
+    const mainImageAMA = document.getElementById("mainimg_ama");
+    mainImageAMA.appendChild(main_img);
+
     const amas_container = document.getElementById("amas_container");
-    for (let i in amas.items) {
-        console.log(i);
-        console.log(amas.items[i]);
+    for (let i = 1; i < amas.items.length; i++) {
         const child = createAMACard(amas.items[i]);
         amas_container.appendChild(child);
     }
