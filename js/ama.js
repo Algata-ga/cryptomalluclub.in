@@ -76,5 +76,11 @@ ready(function () {
         false
     );
 
+    const copyright = document.getElementById("copyright");
+    const date = new Date();
+    const year = date.getFullYear();
+    const copyright_str = `<i class="far fa-copyright"></i> ${year} <a href="#">CMC</a> All Rights Reserved`;
+    copyright.innerHTML = copyright_str;
+
     renderAMA();
 });
