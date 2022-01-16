@@ -194,7 +194,7 @@ footer li a:hover {
     border-radius: 25px;
     background: gold;
     float: left;
-    margin-top: 0.1rem;
+    margin-top: -8px;
     margin-right: 10px;
 }
 .contact:hover .contactmem {
@@ -404,6 +404,7 @@ a {
     border-radius: 15px;
     background: #3b3c38;
     margin: 20px;
+    flex-basis: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -412,9 +413,7 @@ a {
     width: 15rem;
     margin: 1rem;
 }
-.partnerbox .circleimg a img{
-    width: 5rem !important;
-}
+
 
 /*section5*/
 .section5 {
@@ -604,7 +603,8 @@ a {
     right: 0;
 }
 .section6 .cards .container .card .icon .fas,
-.section6 .cards .container .card .icon .fab {
+.section6 .cards .container .card .icon .fab,
+.section6 .cards .container .card .icon .fa {
     font-size: 3.5rem;
     color: #6767e7;
 }
