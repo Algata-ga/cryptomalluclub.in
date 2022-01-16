@@ -46,7 +46,9 @@ function createAMACard(ama) {
 
     const card = `<div class="card"><a href=${ama.link}><img src=${
         ama.thumbnail
-    }></img><h3>${ama.title.substring(12)}</h3><h4>${ama_date}</h4></a></div>`;
+    } loading="lazy"></img><h3>${ama.title.substring(
+        12
+    )}</h3><h4>${ama_date}</h4></a></div>`;
 
     return card;
 }
@@ -54,10 +56,14 @@ async function renderAMARecaps() {
     const amas = await getAMA();
 
     const amas_container = document.getElementById("amas_container");
+    let innerHTML = "";
     for (let i in amas.items) {
+        console.log(i);
         const child = createAMACard(amas.items[i]);
-        amas_container.innerHTML = amas_container.innerHTML + child;
+        innerHTML = amas_container.innerHTML + child;
     }
+
+    amas_container.innerHTML = innerHTML;
 }
 
 function get_date_from_prettyDate(prettyDate) {
@@ -103,7 +109,7 @@ async function renderUpcomingAMA() {
     for (let i in upcomingAMAs) {
         innerHTML =
             innerHTML +
-            `<div class="swiper-slide"><div class="mainimg"><img src=${upcomingAMAs[i]} alt="recent ama 1"></img></div></div>`;
+            `<div class="swiper-slide"><div class="mainimg"><img src=${upcomingAMAs[i]} alt="recent ama ${i}" loading="lazy"></img></div></div>`;
     }
 
     upcomingAMAsDOM.innerHTML = innerHTML;
