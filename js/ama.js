@@ -5,7 +5,6 @@ function ready(fn) {
         document.addEventListener("DOMContentLoaded", fn);
     }
 }
-
 async function getAMA() {
     const requestOptions = {
         method: "POST",
@@ -14,7 +13,6 @@ async function getAMA() {
             title: "Getting AMAs from medium",
         }),
     };
-
     const response = await fetch(
         "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@CryptoMalluC",
         requestOptions
@@ -23,6 +21,22 @@ async function getAMA() {
 
     return data;
 }
+async function getTwitterRSS() {
+    const requestOptions = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            title: "Getting AMA announcemnets from twitter",
+        }),
+    };
+    const response = await fetch(
+        "https://api.rss2json.com/v1/api.json?rss_url=https://nitter.net/CryptomalluC/rss",
+        requestOptions
+    );
+    const data = await response.json();
+    return data;
+}
+
 function createAMACard(ama) {
     const card_div = document.createElement("div");
     card_div.classList.add("card");
@@ -51,15 +65,8 @@ function createAMACard(ama) {
 
     return card_div;
 }
-async function renderAMA() {
+async function renderAMARecaps() {
     const amas = await getAMA();
-
-    const main_img = document.createElement("img");
-    main_img.src = amas.items[0].thumbnail;
-    main_img.alt = "Most Recent AMA";
-
-    const mainImageAMA = document.getElementById("mainimg_ama");
-    mainImageAMA.appendChild(main_img);
 
     const amas_container = document.getElementById("amas_container");
     for (let i = 1; i < amas.items.length; i++) {
@@ -67,6 +74,29 @@ async function renderAMA() {
         amas_container.appendChild(child);
     }
 }
+
+function parse_and_reduce(tweets) {
+    let upcomingAMAs = [];
+    for (let i in tweets) {
+        const tweet = tweets[i];
+        if (tweet.title.search("CRYPTOMALLU CLUB AMA ANNOUNCEMENT") != -1) {
+            upcomingAMAs.push(tweet.thumbnail);
+        }
+    }
+    return upcomingAMAs;
+}
+async function renderUpcomingAMA() {
+    const tweets = await getTwitterRSS();
+    const upcomingAMAs = parse_and_reduce(tweets.items);
+    console.log(upcomingAMAs);
+    const main_img = document.createElement("img");
+    main_img.src = upcomingAMAs[0];
+    main_img.alt = "Most Recent AMA";
+
+    const mainImageAMA = document.getElementById("mainimg_ama");
+    mainImageAMA.appendChild(main_img);
+}
+
 ready(function () {
     document.getElementById("hamburger").addEventListener(
         "click",
@@ -82,5 +112,6 @@ ready(function () {
     const copyright_str = `<i class="far fa-copyright"></i> ${year} <a href="#">CMC</a> All Rights Reserved`;
     copyright.innerHTML = copyright_str;
 
-    renderAMA();
+    renderUpcomingAMA();
+    renderAMARecaps();
 });
