@@ -75,12 +75,34 @@ async function renderAMARecaps() {
     }
 }
 
+function get_date_from_prettyDate(prettyDate) {
+    const parts = prettyDate.split(" ");
+    const date = parts[0].substring(0, parts[0].length - 2);
+    const month = parts[1].substring(0, 3);
+    const year = parts[2];
+    return `${date} ${month} ${year}`;
+}
 function parse_and_reduce(tweets) {
     let upcomingAMAs = [];
+    const current_date = new Date();
     for (let i in tweets) {
         const tweet = tweets[i];
         if (tweet.title.search("CRYPTOMALLU CLUB AMA ANNOUNCEMENT") != -1) {
-            upcomingAMAs.push(tweet.thumbnail);
+            let parsedtitle = tweet.title.split(/\n/);
+            let title = parsedtitle[0].split(":");
+            title = title[1];
+            let ama_date;
+            if (parsedtitle[4] !== undefined) {
+                ama_date = parsedtitle[4].split("-");
+                ama_date = ama_date[1].substring(1);
+                ama_date = new Date(get_date_from_prettyDate(ama_date));
+            }
+
+            const pubDate = new Date(tweet.pubDate);
+            if (ama_date < pubDate) {
+                ama_date.setFullYear(ama_date.getFullYear() + 1);
+            }
+            if (ama_date > current_date) upcomingAMAs.push(tweet.thumbnail);
         }
     }
     return upcomingAMAs;
@@ -88,11 +110,10 @@ function parse_and_reduce(tweets) {
 async function renderUpcomingAMA() {
     const tweets = await getTwitterRSS();
     const upcomingAMAs = parse_and_reduce(tweets.items);
-    console.log(upcomingAMAs);
     const main_img = document.createElement("img");
     main_img.src = upcomingAMAs[0];
     main_img.alt = "Most Recent AMA";
-
+    console.log(upcomingAMAs);
     const mainImageAMA = document.getElementById("mainimg_ama");
     mainImageAMA.appendChild(main_img);
 }
