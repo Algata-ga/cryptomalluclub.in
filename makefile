@@ -8,7 +8,7 @@ live : build
 	scp -4 site-cryptomalluclub.tar.gz ajrx@server.algata.ga:/home/ajrx/
 clean :
 	rm -rf dist &> /dev/null
-	rm site-cryptochallenger.tar.gz &> /dev/null
+	rm site-cryptomalluclub.tar.gz &> /dev/null
 
 
 

@@ -72,6 +72,7 @@ function get_date_from_prettyDate(prettyDate) {
     const year = parts[2];
     return `${date} ${month} ${year}`;
 }
+
 function parse_and_reduce(tweets) {
     let upcomingAMAs = [];
     const current_date = new Date();
@@ -95,6 +96,8 @@ function parse_and_reduce(tweets) {
             if (ama_date > current_date) upcomingAMAs.push(tweet.thumbnail);
         }
     }
+
+    //sort upcomingAMAs w.r.t date
     return upcomingAMAs;
 }
 async function renderUpcomingAMA() {
@@ -108,7 +111,7 @@ async function renderUpcomingAMA() {
     for (let i in upcomingAMAs) {
         innerHTML =
             innerHTML +
-            `<div class="swiper-slide"><div class="mainimg"><img src=${upcomingAMAs[i]} alt="recent ama ${i}" loading="lazy"></img></div></div>`;
+            `<div class="swiper-slide"><div class="mainimg"><img src=${upcomingAMAs[i]} alt="recent ama ${i}" loading="eager"></img></div></div>`;
     }
 
     upcomingAMAsDOM.innerHTML = innerHTML;
@@ -152,5 +155,6 @@ ready(function () {
     });
 
     renderUpcomingAMA();
+
     renderAMARecaps();
 });
