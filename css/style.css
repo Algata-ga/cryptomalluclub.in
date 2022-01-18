@@ -1159,6 +1159,9 @@ footer .follow ul li {
     .mob .contact .contactmem {
         width: 250px;
     }
+    .contact .contactmem .l {
+        margin-top: 55px;
+    }
     .mob .contact .contactmem img {
         position: relative;
         top: -8px;
@@ -1416,6 +1419,9 @@ footer .follow ul li {
 }
 
 @media (max-width: 444px) {
+    .mob .contact .contactmem{
+        width: 70%;
+    }
     .section2 {
         height: 45vh;
         padding-top: 5rem;
@@ -1431,7 +1437,7 @@ footer .follow ul li {
         width: 18rem;
     }
     .section8 .cards .card-container .card2 {
-        height: 22rem;
+        height: 23rem;
     }
     .section8 .cards .card-container .card2 p i {
         font-size: 0.7rem !important;
