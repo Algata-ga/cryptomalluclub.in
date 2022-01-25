@@ -5,32 +5,17 @@ function ready(fn) {
         document.addEventListener("DOMContentLoaded", fn);
     }
 }
-async function getAMA() {
-    const requestOptions = {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            title: "Getting AMAs from medium",
-        }),
-    };
-    const response = await fetch(
-        "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@CryptoMalluC",
-        requestOptions
-    );
-    const data = await response.json();
 
-    return data;
-}
-async function getTwitterRSS() {
+async function getJsonFromRss(url) {
     const requestOptions = {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-            title: "Getting AMA announcemnets from twitter",
+            title: "Thanks",
         }),
     };
     const response = await fetch(
-        "https://api.rss2json.com/v1/api.json?rss_url=https://nitter.net/CryptomalluC/rss",
+        "https://api.rss2json.com/v1/api.json?rss_url=" + url,
         requestOptions
     );
     const data = await response.json();
@@ -52,16 +37,17 @@ function createAMACard(ama) {
 
     return card;
 }
+
 async function renderAMARecaps() {
-    const amas = await getAMA();
+    const AMARECAPSURL = "https://medium.com/feed/@CryptoMalluC";
+    const amas = await getJsonFromRss(AMARECAPSURL);
+
+    const innerHTML = amas.items.reduce((innerHTML, ama) => {
+        const child = createAMACard(ama);
+        return innerHTML + child;
+    }, "");
 
     const amas_container = document.getElementById("amas_container");
-    let innerHTML = "";
-    for (let i in amas.items) {
-        const child = createAMACard(amas.items[i]);
-        innerHTML = innerHTML + amas_container.innerHTML + child;
-    }
-
     amas_container.innerHTML = innerHTML;
 }
 
@@ -73,50 +59,52 @@ function get_date_from_prettyDate(prettyDate) {
     return `${date} ${month} ${year}`;
 }
 
-function parse_and_reduce(tweets) {
-    let upcomingAMAs = [];
-    const current_date = new Date();
-    for (let i in tweets) {
-        const tweet = tweets[i];
-        if (tweet.title.search("CRYPTOMALLU CLUB AMA ANNOUNCEMENT") != -1) {
-            let parsedtitle = tweet.title.split(/\n/);
-            let title = parsedtitle[0].split(":");
-            title = title[1];
-            let ama_date;
-            if (parsedtitle[4] !== undefined) {
-                ama_date = parsedtitle[4].split("-");
-                ama_date = ama_date[1].substring(1);
-                ama_date = new Date(get_date_from_prettyDate(ama_date));
-            }
-
-            const pubDate = new Date(tweet.pubDate);
-            if (ama_date < pubDate) {
-                ama_date.setFullYear(ama_date.getFullYear() + 1);
-            }
-            if (ama_date > current_date) upcomingAMAs.push(tweet.thumbnail);
+function getUpcomingAMAs(tweets) {
+    const AMAnnouncements = tweets.filter((tweet) => {
+        return tweet.title.search("CRYPTOMALLU CLUB AMA ANNOUNCEMENT") != -1;
+    });
+    const upcomingAMAs = AMAnnouncements.filter((ama) => {
+        const current_date = new Date();
+        let parsedtitle = ama.title.split(/\n/);
+        let title = parsedtitle[0].split(":");
+        title = title[1];
+        let ama_date;
+        if (parsedtitle[4] !== undefined) {
+            ama_date = parsedtitle[4].split("-");
+            ama_date = ama_date[1].substring(1);
+            ama_date = new Date(get_date_from_prettyDate(ama_date));
         }
-    }
+        return ama_date > current_date;
+    });
 
-    //sort upcomingAMAs w.r.t date
-    return upcomingAMAs;
+    const upcomingAMACards = upcomingAMAs.map((ama) => {
+        return ama.thumbnail;
+    });
+    return upcomingAMACards;
 }
+
 async function renderUpcomingAMA() {
-    const upcomingAMAsDOM = document.getElementById("upcomingAMAs");
+    const TWITTER_URL = "https://nitter.net/CryptomalluC/rss";
+    const tweets = await getJsonFromRss(TWITTER_URL);
+    const upcomingAMAs = getUpcomingAMAs(tweets.items);
 
-    const tweets = await getTwitterRSS();
-    const upcomingAMAs = parse_and_reduce(tweets.items);
-
-    let innerHTML = "";
-
-    for (let i in upcomingAMAs) {
-        innerHTML =
+    const innerHTML = upcomingAMAs.reduce((innerHTML, ama) => {
+        return (
             innerHTML +
-            `<div class="swiper-slide"><div class="mainimg"><img src=${upcomingAMAs[i]} alt="recent ama ${i}" loading="eager"></img></div></div>`;
-    }
+            `<div class="swiper-slide"><div class="mainimg"><img src=${ama} alt="recent ama" loading="eager"></img></div></div>`
+        );
+    }, "");
 
-    upcomingAMAsDOM.innerHTML = innerHTML;
+    const upcomingAMADOM = document.getElementById("upcomingAMAs");
+    upcomingAMADOM.innerHTML = innerHTML;
 }
-
+function renderCopyright() {
+    const copyright = document.getElementById("copyright");
+    const date = new Date();
+    const year = date.getFullYear();
+    const copyright_str = `<i class="far fa-copyright"></i> ${year} <a href="#">CMC</a> All Rights Reserved`;
+    copyright.innerHTML = copyright_str;
+}
 ready(function () {
     document.getElementById("hamburger").addEventListener(
         "click",
@@ -125,14 +113,8 @@ ready(function () {
         },
         false
     );
-
-    const copyright = document.getElementById("copyright");
-    const date = new Date();
-    const year = date.getFullYear();
-    const copyright_str = `<i class="far fa-copyright"></i> ${year} <a href="#">CMC</a> All Rights Reserved`;
-    copyright.innerHTML = copyright_str;
-
-    var swiper = new Swiper(".mySwiper", {
+    renderCopyright();
+    new Swiper(".mySwiper", {
         effect: "coverflow",
         grabCursor: true,
         centeredSlides: true,
