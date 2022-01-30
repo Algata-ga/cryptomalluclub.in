@@ -22,12 +22,21 @@ async function getJsonFromRss(url) {
     return data;
 }
 
-function createAMACard(ama) {
-    const date = new Date(ama.pubDate);
+function get_date_from_prettyDate(prettyDate) {
+    const parts = prettyDate.split(" ");
+    const date = parts[0].substring(0, parts[0].length - 2);
+    const month = parts[1].substring(0, 3);
+    const year = parts[2];
+    return `${date} ${month} ${year}`;
+}
 
-    const ama_date = `${date.getDate()} ${date.toLocaleString("default", {
-        month: "short",
-    })} ${date.getFullYear()}`;
+function getAMADate(ama) {
+    const dateString = ama.description.split("\n")[3];
+    const prettyDate = dateString.substring(18, dateString.length - 13);
+    return prettyDate;
+}
+function createAMACard(ama) {
+    const ama_date = getAMADate(ama);
 
     const card = `<div class="card"><a href=${ama.link}><img src=${
         ama.thumbnail
@@ -49,14 +58,6 @@ async function renderAMARecaps() {
 
     const amas_container = document.getElementById("amas_container");
     amas_container.innerHTML = innerHTML;
-}
-
-function get_date_from_prettyDate(prettyDate) {
-    const parts = prettyDate.split(" ");
-    const date = parts[0].substring(0, parts[0].length - 2);
-    const month = parts[1].substring(0, 3);
-    const year = parts[2];
-    return `${date} ${month} ${year}`;
 }
 
 function getUpcomingAMAs(tweets) {
