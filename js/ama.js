@@ -88,7 +88,13 @@ async function renderUpcomingAMA() {
     const TWITTER_URL = "https://nitter.net/CryptomalluC/rss";
     const tweets = await getJsonFromRss(TWITTER_URL);
     const upcomingAMAs = getUpcomingAMAs(tweets.items);
+    const upcomingAMADOM = document.getElementById("upcomingAMAs");
 
+    console.log(upcomingAMAs.length);
+    if (upcomingAMAs.length === 0) {
+        upcomingAMADOM.innerHTML = "<p>Nothing to show here</p>";
+        return;
+    }
     const innerHTML = upcomingAMAs.reduce((innerHTML, ama) => {
         return (
             innerHTML +
@@ -96,8 +102,7 @@ async function renderUpcomingAMA() {
         );
     }, "");
 
-    const upcomingAMADOM = document.getElementById("upcomingAMAs");
-    upcomingAMADOM.innerHTML = innerHTML;
+    upcomingAMADOM.innerHTML = `<div class="swiper mySwiper pb-5"><div class="swiper-wrapper" id="upcomingAMAs">${innerHTML}</div><div class="swiper-pagination"></div></div>`;
 }
 function renderCopyright() {
     const copyright = document.getElementById("copyright");
