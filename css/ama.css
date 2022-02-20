@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+
 body {
     margin: 0;
     padding: 0;
@@ -202,11 +206,14 @@ footer li a:hover {
     font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     text-align: center;
     padding-top: 100px;
     color: white;
     
+}
+.upcoming p{
+    margin-bottom: 0%;
 }
 .Section1 {
     background: linear-gradient(
@@ -268,12 +275,14 @@ footer li a:hover {
 /*sec3*/
 .sec3 {
     padding-bottom: 5rem;
+    font-family: "Work Sans", sans-serif;
     background: #040506;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: white;
+
 }
 .sec3 .cards {
     width: 90%;
@@ -465,6 +474,10 @@ footer .follow ul li {
     margin-right: 10%;
     height: 1px;
     background: #e5e7eb;
+}
+.far{
+    position: relative;
+    top: -2px;
 }
 .copy {
     height: 50px;
