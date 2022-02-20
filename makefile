@@ -5,7 +5,7 @@ build :
 
 live : build
 	tar czf site-cryptomalluclub.tar.gz dist/
-	scp -4 site-cryptomalluclub.tar.gz ajrx@server.algata.ga:/home/ajrx/
+	scp -4 site-cryptomalluclub.tar.gz ajrx@server.algata.in:/home/ajrx/
 clean :
 	rm -rf dist &> /dev/null
 	rm site-cryptomalluclub.tar.gz &> /dev/null
