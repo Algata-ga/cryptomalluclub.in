@@ -24,7 +24,8 @@ async function getJsonFromRss(url) {
 
 function get_date_from_prettyDate(prettyDate) {
     const parts = prettyDate.split(" ");
-    const date = parts[0].substring(0, parts[0].length - 2);
+    console.log(parts);
+    const date = parts[0];
     const month = parts[1].substring(0, 3);
     const year = parts[2];
     return `${date} ${month} ${year}`;
@@ -62,8 +63,9 @@ async function renderAMARecaps() {
 
 function getUpcomingAMAs(tweets) {
     const AMAnnouncements = tweets.filter((tweet) => {
-        return tweet.title.search("CRYPTOMALLU CLUB AMA ANNOUNCEMENT") != -1;
+        return tweet.title.search("AMA ANNOUNCEMENT") != -1;
     });
+
     const upcomingAMAs = AMAnnouncements.filter((ama) => {
         const current_date = new Date();
         let parsedtitle = ama.title.split(/\n/);
